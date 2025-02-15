@@ -9,6 +9,6 @@ namespace TASKHIVE.DTO.Label
         public int labelId { get; set; }
 
         [Required]
-        public addLabel lableName { get; set; }
+        public addLabel labelName { get; set; }
     }
 }

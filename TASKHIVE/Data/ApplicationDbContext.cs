@@ -13,7 +13,7 @@ namespace TASKHIVE.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Work> Works { get; set; }
         public DbSet<TimeLog> TimeLogs { get; set; }
-        public DbSet<UserMeeting> UserMeeting { get; set; }
+        public DbSet<UserMeeting> UserMeetings { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserWork> UserWorks { get; set; }
         public DbSet<Project> Projects { get; set; }

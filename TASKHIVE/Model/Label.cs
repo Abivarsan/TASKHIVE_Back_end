@@ -14,7 +14,7 @@ namespace TASKHIVE.Model
         public int labelId { get; set; }
 
         [Required]
-        public addLabel lableName { get; set; }
+        public addLabel labelName { get; set; }
 
         public ICollection<WorkLabel> WorkLabels { get; set; }
     }
