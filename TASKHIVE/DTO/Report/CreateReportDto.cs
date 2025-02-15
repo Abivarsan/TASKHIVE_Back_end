@@ -14,10 +14,7 @@ namespace TASKHIVE.DTO.Report
 
         [Required]
         public string reportContent { get; set; }
-
-
         [Required]
         public int userId { get; set; }
-        public User User { get; set; }
     }
 }

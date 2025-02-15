@@ -2,11 +2,14 @@
 
 namespace TASKHIVE.DTO.WorkLabel
 {
-    public class CreateLabelDto
+    public class CreateWorkLabelDto
     {
         [Key]
         [Required]
-        public int roleId { get; set; }
-        public string roleName { get; set; }
+        public int workLabelId { get; set; }
+
+        [Required]
+        public int workId { get; set; }
+        public int labelId { get; set; }
     }
 }
