@@ -1,0 +1,1346 @@
+2025-02-15 00:21:07.283 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 00:21:07.398 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 00:21:07.400 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 00:21:07.502 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 00:21:07.503 +05:30 [INF] Hosting environment: Development
+2025-02-15 00:21:07.504 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 00:21:08.410 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 00:21:08.643 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 244.2938ms
+2025-02-15 00:21:08.655 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 00:21:08.728 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 72.2204ms
+2025-02-15 00:21:08.732 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 00:21:08.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 00:21:08.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 00:21:08.734 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 00:21:08.755 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 20.891ms
+2025-02-15 00:21:08.766 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 00:21:08.802 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 00:21:08.802 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 00:21:08.807 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 73.7981ms
+2025-02-15 00:21:08.807 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 75.1986ms
+2025-02-15 00:21:08.845 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 00:21:08.847 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 114.3344ms
+2025-02-15 00:21:08.900 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.467ms
+2025-02-15 00:21:09.065 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 00:21:09.094 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.9181ms
+2025-02-15 00:21:09.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/favicon-32x32.png - null null
+2025-02-15 00:21:09.412 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-02-15 00:21:09.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/favicon-32x32.png - 200 628 image/png 5.5263ms
+2025-02-15 00:22:13.481 +05:30 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TaskHiveDB];
+2025-02-15 00:22:13.696 +05:30 [INF] Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TaskHiveDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-02-15 00:22:13.724 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 00:22:13.727 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-02-15 00:22:13.780 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-02-15 00:22:13.840 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-02-15 00:22:13.847 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 00:22:13.849 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-15 00:22:13.889 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-15 00:22:13.896 +05:30 [INF] Applying migration '20250214185202_inital'.
+2025-02-15 00:22:13.922 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [roleId] int NOT NULL IDENTITY,
+    [roleName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([roleId])
+);
+2025-02-15 00:22:13.924 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Works] (
+    [workID] int NOT NULL IDENTITY,
+    [description] nvarchar(max) NOT NULL,
+    [duedate] datetime2 NOT NULL,
+    [status] nvarchar(max) NOT NULL,
+    [assignedTo] int NOT NULL,
+    CONSTRAINT [PK_Works] PRIMARY KEY ([workID])
+);
+2025-02-15 00:22:13.927 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [userId] int NOT NULL IDENTITY,
+    [email] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [roleId] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([userId]),
+    CONSTRAINT [FK_Users_Roles_roleId] FOREIGN KEY ([roleId]) REFERENCES [Roles] ([roleId]) ON DELETE CASCADE
+);
+2025-02-15 00:22:13.929 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Meetings] (
+    [meetingId] int NOT NULL IDENTITY,
+    [scheduledDate] datetime2 NOT NULL,
+    [meetingLink] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    CONSTRAINT [PK_Meetings] PRIMARY KEY ([meetingId]),
+    CONSTRAINT [FK_Meetings_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 00:22:13.930 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [reportId] int NOT NULL IDENTITY,
+    [reportDate] datetime2 NOT NULL,
+    [reportContent] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([reportId]),
+    CONSTRAINT [FK_Reports_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 00:22:13.933 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TimeLogs] (
+    [timelogId] int NOT NULL IDENTITY,
+    [logDate] datetime2 NOT NULL,
+    [hoursWorked] int NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_TimeLogs] PRIMARY KEY ([timelogId]),
+    CONSTRAINT [FK_TimeLogs_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_TimeLogs_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workID]) ON DELETE CASCADE
+);
+2025-02-15 00:22:13.935 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserWorks] (
+    [userTaskId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_UserWorks] PRIMARY KEY ([userTaskId]),
+    CONSTRAINT [FK_UserWorks_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserWorks_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workID]) ON DELETE CASCADE
+);
+2025-02-15 00:22:14.080 +05:30 [ERR] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserMeeting] (
+    [userMeetingId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    [meetingId] int NOT NULL,
+    CONSTRAINT [PK_UserMeeting] PRIMARY KEY ([userMeetingId]),
+    CONSTRAINT [FK_UserMeeting_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserMeeting_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 00:26:08.447 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 00:26:08.489 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-15 00:26:08.505 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-15 00:26:58.918 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 00:26:58.947 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-02-15 00:26:58.972 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-02-15 00:26:59.018 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-02-15 00:26:59.025 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 00:26:59.026 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-15 00:26:59.039 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-15 00:26:59.045 +05:30 [INF] Applying migration '20250214185649_inital'.
+2025-02-15 00:26:59.071 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [roleId] int NOT NULL IDENTITY,
+    [roleName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([roleId])
+);
+2025-02-15 00:26:59.072 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Works] (
+    [workID] int NOT NULL IDENTITY,
+    [description] nvarchar(max) NOT NULL,
+    [duedate] datetime2 NOT NULL,
+    [status] nvarchar(max) NOT NULL,
+    [assignedTo] int NOT NULL,
+    CONSTRAINT [PK_Works] PRIMARY KEY ([workID])
+);
+2025-02-15 00:26:59.076 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [userId] int NOT NULL IDENTITY,
+    [email] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [roleId] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([userId]),
+    CONSTRAINT [FK_Users_Roles_roleId] FOREIGN KEY ([roleId]) REFERENCES [Roles] ([roleId]) ON DELETE CASCADE
+);
+2025-02-15 00:26:59.077 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Meetings] (
+    [meetingId] int NOT NULL IDENTITY,
+    [scheduledDate] datetime2 NOT NULL,
+    [meetingLink] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    CONSTRAINT [PK_Meetings] PRIMARY KEY ([meetingId]),
+    CONSTRAINT [FK_Meetings_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 00:26:59.079 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [reportId] int NOT NULL IDENTITY,
+    [reportDate] datetime2 NOT NULL,
+    [reportContent] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([reportId]),
+    CONSTRAINT [FK_Reports_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 00:26:59.082 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TimeLogs] (
+    [timelogId] int NOT NULL IDENTITY,
+    [logDate] datetime2 NOT NULL,
+    [hoursWorked] int NOT NULL,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_TimeLogs] PRIMARY KEY ([timelogId]),
+    CONSTRAINT [FK_TimeLogs_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_TimeLogs_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workID]) ON DELETE CASCADE
+);
+2025-02-15 00:26:59.086 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserWorks] (
+    [userTaskId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [UsersuserId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_UserWorks] PRIMARY KEY ([userTaskId]),
+    CONSTRAINT [FK_UserWorks_Users_UsersuserId] FOREIGN KEY ([UsersuserId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserWorks_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workID]) ON DELETE CASCADE
+);
+2025-02-15 00:26:59.153 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserMeeting] (
+    [userMeetingId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [meetingId] int NOT NULL,
+    CONSTRAINT [PK_UserMeeting] PRIMARY KEY ([userMeetingId]),
+    CONSTRAINT [FK_UserMeeting_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]),
+    CONSTRAINT [FK_UserMeeting_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId])
+);
+2025-02-15 00:26:59.159 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Meetings_UsersuserId] ON [Meetings] ([UsersuserId]);
+2025-02-15 00:26:59.160 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reports_UsersuserId] ON [Reports] ([UsersuserId]);
+2025-02-15 00:26:59.161 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_UsersuserId] ON [TimeLogs] ([UsersuserId]);
+2025-02-15 00:26:59.162 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_workId] ON [TimeLogs] ([workId]);
+2025-02-15 00:26:59.163 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeeting_meetingId] ON [UserMeeting] ([meetingId]);
+2025-02-15 00:26:59.163 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeeting_userId] ON [UserMeeting] ([userId]);
+2025-02-15 00:26:59.164 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_roleId] ON [Users] ([roleId]);
+2025-02-15 00:26:59.165 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserWorks_UsersuserId] ON [UserWorks] ([UsersuserId]);
+2025-02-15 00:26:59.165 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_UserWorks_workId] ON [UserWorks] ([workId]);
+2025-02-15 00:26:59.179 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250214185649_inital', N'9.0.2');
+2025-02-15 00:26:59.183 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-02-15 00:27:16.665 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 00:27:16.900 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 00:27:16.902 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 00:27:17.071 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 00:27:17.073 +05:30 [INF] Hosting environment: Development
+2025-02-15 00:27:17.074 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 00:27:17.604 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 00:27:17.806 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 209.289ms
+2025-02-15 00:27:17.815 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 00:27:17.898 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 82.6217ms
+2025-02-15 00:27:17.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 00:27:17.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 00:27:17.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 00:27:17.904 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 00:27:17.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 19.4093ms
+2025-02-15 00:27:17.952 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 00:27:17.952 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 00:27:17.954 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 53.1019ms
+2025-02-15 00:27:17.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 00:27:17.956 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 55.0211ms
+2025-02-15 00:27:17.994 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 00:27:17.996 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 94.4336ms
+2025-02-15 00:27:18.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.5582ms
+2025-02-15 00:27:18.160 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 00:27:18.177 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.9439ms
+2025-02-15 00:27:39.074 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 49
+2025-02-15 00:27:39.082 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:27:39.087 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:27:39.130 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:27:41.589 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:27:41.740 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 2604.1691ms
+2025-02-15 00:27:41.743 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:27:41.747 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateRoleDto -> Role
+TASKHIVE.DTO.Role.CreateRoleDto -> TASKHIVE.Model.Role
+   at lambda_method23(Closure, Object, Role, ResolutionContext)
+   at TASKHIVE.Controllers.RoleController.Create(CreateRoleDto roleDto) in C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE\Controllers\RoleController.cs:line 35
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-15 00:27:41.860 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 500 null text/plain; charset=utf-8 2786.0802ms
+2025-02-15 00:33:23.222 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 00:33:23.340 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 00:33:23.342 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 00:33:23.590 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 00:33:23.591 +05:30 [INF] Hosting environment: Development
+2025-02-15 00:33:23.592 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 00:33:24.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 00:33:24.380 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 193.0105ms
+2025-02-15 00:33:24.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 00:33:24.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 81.6682ms
+2025-02-15 00:33:24.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 00:33:24.481 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 00:33:24.481 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 00:33:24.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 00:33:24.527 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 00:33:24.555 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 72.0153ms
+2025-02-15 00:33:24.566 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 00:33:24.567 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 00:33:24.579 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 100.0631ms
+2025-02-15 00:33:24.579 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 97.6234ms
+2025-02-15 00:33:24.618 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 00:33:24.619 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 138.7205ms
+2025-02-15 00:33:24.634 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.523ms
+2025-02-15 00:33:24.833 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 00:33:24.861 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.0793ms
+2025-02-15 00:33:49.347 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 48
+2025-02-15 00:33:49.358 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:33:49.374 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:33:49.427 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:33:49.914 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-02-15 00:33:49.951 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 505.9879ms
+2025-02-15 00:33:49.953 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:33:49.955 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 400 null application/problem+json; charset=utf-8 608.5544ms
+2025-02-15 00:34:23.267 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 00:34:23.279 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:34:23.285 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:34:25.068 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 00:34:25.119 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 00:34:25.123 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 1836.7155ms
+2025-02-15 00:34:25.125 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:34:25.142 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 1876.246ms
+2025-02-15 00:34:35.790 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 47
+2025-02-15 00:34:35.793 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:34:35.794 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:34:35.795 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:34:35.803 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-02-15 00:34:35.804 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 7.3376ms
+2025-02-15 00:34:35.806 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:34:35.807 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 400 null application/problem+json; charset=utf-8 17.2951ms
+2025-02-15 00:34:59.657 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 50
+2025-02-15 00:34:59.661 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:34:59.662 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:34:59.663 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:34:59.895 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:35:00.117 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 00:35:00.146 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 00:35:00.184 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 518.5874ms
+2025-02-15 00:35:00.187 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:00.189 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 531.9947ms
+2025-02-15 00:35:20.390 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 55
+2025-02-15 00:35:20.401 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:35:20.402 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:20.402 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:35:20.471 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:35:20.478 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 00:35:20.480 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 00:35:20.482 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 77.7595ms
+2025-02-15 00:35:20.483 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:20.484 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 94.296ms
+2025-02-15 00:35:38.110 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 53
+2025-02-15 00:35:38.116 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:35:38.118 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:38.120 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:35:38.129 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:35:38.146 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 00:35:38.148 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 00:35:38.149 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 25.5237ms
+2025-02-15 00:35:38.150 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:38.151 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 41.1175ms
+2025-02-15 00:35:55.394 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 52
+2025-02-15 00:35:55.399 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:35:55.401 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:55.403 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:35:55.429 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:35:55.436 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 00:35:55.440 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 00:35:55.441 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 35.3627ms
+2025-02-15 00:35:55.443 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:35:55.445 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 51.5488ms
+2025-02-15 00:36:00.796 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 59
+2025-02-15 00:36:00.803 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:36:00.804 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:36:00.807 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:36:00.820 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 00:36:00.826 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 00:36:00.828 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 00:36:00.829 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 18.8701ms
+2025-02-15 00:36:00.831 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 00:36:00.835 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 38.8161ms
+2025-02-15 00:36:05.673 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 00:36:05.677 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:36:05.678 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:36:05.687 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 00:36:05.694 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 00:36:05.696 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 14.178ms
+2025-02-15 00:36:05.697 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:36:05.697 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 25.1366ms
+2025-02-15 00:36:15.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role/4 - null null
+2025-02-15 00:36:15.479 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 00:36:15.487 +05:30 [INF] Route matched with {action = "GetById", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.GetRoleByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:36:15.576 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+WHERE [r].[roleId] = @__p_0
+2025-02-15 00:36:15.579 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Role.GetRoleByIdDto'.
+2025-02-15 00:36:15.583 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetById (TASKHIVE) in 91.0313ms
+2025-02-15 00:36:15.584 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 00:36:15.585 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role/4 - 200 null application/json; charset=utf-8 109.71ms
+2025-02-15 00:37:05.367 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/Role/3 - application/json 54
+2025-02-15 00:37:05.372 +05:30 [INF] CORS policy execution successful.
+2025-02-15 00:37:05.373 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Update (TASKHIVE)'
+2025-02-15 00:37:05.377 +05:30 [INF] Route matched with {action = "Update", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.Role]] Update(Int32, TASKHIVE.DTO.Role.UpdateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:37:05.423 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Roles] SET [roleName] = @p0
+OUTPUT 1
+WHERE [roleId] = @p1;
+2025-02-15 00:37:05.433 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-15 00:37:05.435 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Update (TASKHIVE) in 55.8974ms
+2025-02-15 00:37:05.437 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Update (TASKHIVE)'
+2025-02-15 00:37:05.439 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/Role/3 - 204 null null 71.7832ms
+2025-02-15 00:37:16.720 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role/3 - null null
+2025-02-15 00:37:16.731 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 00:37:16.734 +05:30 [INF] Route matched with {action = "GetById", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.GetRoleByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:37:16.744 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+WHERE [r].[roleId] = @__p_0
+2025-02-15 00:37:16.747 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Role.GetRoleByIdDto'.
+2025-02-15 00:37:16.749 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetById (TASKHIVE) in 12.2018ms
+2025-02-15 00:37:16.750 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 00:37:16.752 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role/3 - 200 null application/json; charset=utf-8 32.653ms
+2025-02-15 00:37:23.140 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 00:37:23.143 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:37:23.144 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 00:37:23.160 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 00:37:23.162 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 00:37:23.163 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 18.1845ms
+2025-02-15 00:37:23.165 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 00:37:23.166 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 26.2207ms
+2025-02-15 01:06:31.173 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 01:06:31.336 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 01:06:31.341 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 01:06:31.502 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 01:06:31.504 +05:30 [INF] Hosting environment: Development
+2025-02-15 01:06:31.506 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 01:06:31.840 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 01:06:32.055 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 222.4581ms
+2025-02-15 01:06:32.068 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 01:06:32.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 79.6807ms
+2025-02-15 01:06:32.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 01:06:32.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 01:06:32.152 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 01:06:32.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 01:06:32.181 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 01:06:32.183 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 29.2605ms
+2025-02-15 01:06:32.215 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 01:06:32.215 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 01:06:32.219 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 67.6846ms
+2025-02-15 01:06:32.227 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 74.813ms
+2025-02-15 01:06:32.271 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 01:06:32.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.603ms
+2025-02-15 01:06:32.273 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 121.6024ms
+2025-02-15 01:06:32.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 01:06:32.486 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.2139ms
+2025-02-15 01:06:44.331 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 01:06:44.362 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:06:44.450 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:06:44.482 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 13.3863ms
+2025-02-15 01:06:44.494 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:06:44.505 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TASKHIVE.IRepository.IUsersRepository' while attempting to activate 'TASKHIVE.Controllers.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-15 01:06:44.688 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 500 null text/plain; charset=utf-8 359.0971ms
+2025-02-15 01:12:36.591 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 01:12:36.689 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 01:12:36.692 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 01:12:36.823 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 01:12:36.825 +05:30 [INF] Hosting environment: Development
+2025-02-15 01:12:36.826 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 01:12:37.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 01:12:37.496 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 162.8545ms
+2025-02-15 01:12:37.505 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 01:12:37.581 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 76.2398ms
+2025-02-15 01:12:37.587 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 01:12:37.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 01:12:37.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 01:12:37.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 01:12:37.615 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 01:12:37.624 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 36.5104ms
+2025-02-15 01:12:37.671 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 01:12:37.671 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 01:12:37.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 89.1299ms
+2025-02-15 01:12:37.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 88.2073ms
+2025-02-15 01:12:37.703 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 01:12:37.709 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 122.2638ms
+2025-02-15 01:12:37.725 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.7303ms
+2025-02-15 01:12:37.888 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 01:12:37.914 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3331ms
+2025-02-15 01:12:42.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 01:12:42.942 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:12:43.038 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:12:48.612 +05:30 [INF] Executed DbCommand (175ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+2025-02-15 01:12:48.776 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 01:12:48.810 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 5752.8825ms
+2025-02-15 01:12:48.821 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:12:48.841 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 200 null application/json; charset=utf-8 5931.4746ms
+2025-02-15 01:13:29.671 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Users - application/json 104
+2025-02-15 01:13:29.695 +05:30 [INF] CORS policy execution successful.
+2025-02-15 01:13:29.702 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 01:13:29.743 +05:30 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.CreateUserDto]] Create(TASKHIVE.DTO.Users.CreateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:13:30.521 +05:30 [INF] Executed DbCommand (103ms) [Parameters=[@__usersDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__usersDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 01:13:31.164 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [password], [roleId])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2);
+2025-02-15 01:13:31.262 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Users'.
+2025-02-15 01:13:31.334 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Create (TASKHIVE) in 1583.5729ms
+2025-02-15 01:13:31.337 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 01:13:31.341 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Users - 201 null application/json; charset=utf-8 1670.4722ms
+2025-02-15 01:13:38.565 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 01:13:38.581 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:13:38.587 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:13:38.646 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+2025-02-15 01:13:38.861 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 266.5509ms
+2025-02-15 01:13:38.867 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:13:38.875 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[TASKHIVE.Model.Users, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Users -> GetAllRoleDto
+TASKHIVE.Model.Users -> TASKHIVE.DTO.Role.GetAllRoleDto
+   at lambda_method123(Closure, Users, GetAllRoleDto, ResolutionContext)
+   at lambda_method29(Closure, Object, List`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method29(Closure, Object, List`1, ResolutionContext)
+   at TASKHIVE.Controllers.UsersController.GetAll() in C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE\Controllers\UsersController.cs:line 51
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-15 01:13:39.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 500 null text/plain; charset=utf-8 537.3237ms
+2025-02-15 01:14:07.277 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users/4 - null null
+2025-02-15 01:14:07.290 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:14:07.308 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:14:07.458 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-15 01:14:07.472 +05:30 [ERR] Error while try to get record id: 4
+2025-02-15 01:14:07.488 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-15 01:14:07.494 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetById (TASKHIVE) in 180.5304ms
+2025-02-15 01:14:07.500 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:14:07.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users/4 - 204 null null 227.1969ms
+2025-02-15 01:14:17.709 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users/1 - null null
+2025-02-15 01:14:17.716 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:14:17.722 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:14:17.745 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-15 01:14:17.761 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Users.GetUserByIdDto'.
+2025-02-15 01:14:17.768 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetById (TASKHIVE) in 40.307ms
+2025-02-15 01:14:17.771 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:14:17.774 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users/1 - 200 null application/json; charset=utf-8 65.841ms
+2025-02-15 01:14:34.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 01:14:34.569 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 01:14:34.582 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 01:14:34.623 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 01:14:34.661 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 01:14:34.666 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 76.6529ms
+2025-02-15 01:14:34.669 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 01:14:34.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 114.349ms
+2025-02-15 01:15:34.944 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/Users/1 - application/json 93
+2025-02-15 01:15:34.953 +05:30 [INF] CORS policy execution successful.
+2025-02-15 01:15:34.956 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 01:15:34.974 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.Users]] Update(Int32, TASKHIVE.DTO.Users.UpdateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:15:35.015 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-15 01:15:35.075 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Update (TASKHIVE) in 92.3057ms
+2025-02-15 01:15:35.080 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 01:15:35.085 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/Users/1 - 400 null application/problem+json; charset=utf-8 140.852ms
+2025-02-15 01:15:40.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users/1 - null null
+2025-02-15 01:15:40.011 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:15:40.014 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:15:40.039 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-15 01:15:40.049 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Users.GetUserByIdDto'.
+2025-02-15 01:15:40.053 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetById (TASKHIVE) in 31.2417ms
+2025-02-15 01:15:40.057 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:15:40.061 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users/1 - 200 null application/json; charset=utf-8 57.6009ms
+2025-02-15 01:18:43.083 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 01:18:43.180 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 01:18:43.184 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 01:18:43.303 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 01:18:43.305 +05:30 [INF] Hosting environment: Development
+2025-02-15 01:18:43.306 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 01:18:43.587 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 01:18:43.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 148.3248ms
+2025-02-15 01:18:43.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 01:18:43.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 95.7617ms
+2025-02-15 01:18:43.838 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 01:18:43.839 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 01:18:43.839 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 01:18:43.839 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 01:18:43.880 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 01:18:43.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 53.1697ms
+2025-02-15 01:18:43.911 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 01:18:43.912 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 01:18:43.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 77.7538ms
+2025-02-15 01:18:43.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 77.3544ms
+2025-02-15 01:18:43.927 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 01:18:43.929 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 90.2251ms
+2025-02-15 01:18:43.955 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.7832ms
+2025-02-15 01:18:44.097 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 01:18:44.128 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.112ms
+2025-02-15 01:18:49.923 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 01:18:49.955 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:18:50.045 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:18:54.875 +05:30 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+2025-02-15 01:18:55.205 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Users.GetAllUserDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 01:18:55.242 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 5179.9537ms
+2025-02-15 01:18:55.253 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:18:55.283 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 200 null application/json; charset=utf-8 5359.8254ms
+2025-02-15 01:20:14.384 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 01:20:14.493 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 01:20:14.497 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 01:20:14.720 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 01:20:14.721 +05:30 [INF] Hosting environment: Development
+2025-02-15 01:20:14.723 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 01:20:15.100 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 01:20:15.252 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 161.6268ms
+2025-02-15 01:20:15.260 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 01:20:15.335 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 74.3083ms
+2025-02-15 01:20:15.341 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 01:20:15.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 01:20:15.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 01:20:15.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 01:20:15.369 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 01:20:15.384 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 41.0753ms
+2025-02-15 01:20:15.406 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 01:20:15.406 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 01:20:15.413 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 71.2228ms
+2025-02-15 01:20:15.413 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 71.7182ms
+2025-02-15 01:20:15.425 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 01:20:15.438 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 96.4064ms
+2025-02-15 01:20:15.458 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.586ms
+2025-02-15 01:20:15.658 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 01:20:15.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.2042ms
+2025-02-15 01:20:41.628 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 01:20:41.665 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:20:41.744 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:20:46.368 +05:30 [INF] Executed DbCommand (152ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+2025-02-15 01:20:46.697 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Users.GetAllUserDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 01:20:46.735 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 4973.7449ms
+2025-02-15 01:20:46.743 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 01:20:46.770 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 200 null application/json; charset=utf-8 5142.4215ms
+2025-02-15 01:21:23.081 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/Users/1 - application/json 96
+2025-02-15 01:21:23.096 +05:30 [INF] CORS policy execution successful.
+2025-02-15 01:21:23.101 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 01:21:23.139 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.Users]] Update(Int32, TASKHIVE.DTO.Users.UpdateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:21:23.918 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [email] = @p0, [password] = @p1, [roleId] = @p2
+OUTPUT 1
+WHERE [userId] = @p3;
+2025-02-15 01:21:23.971 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-15 01:21:23.975 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Update (TASKHIVE) in 827.5851ms
+2025-02-15 01:21:23.980 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 01:21:23.988 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/Users/1 - 204 null null 908.1395ms
+2025-02-15 01:21:36.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users/1 - null null
+2025-02-15 01:21:36.743 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:21:36.755 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 01:21:37.136 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[password], [u].[roleId]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-15 01:21:37.155 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Users.GetUserByIdDto'.
+2025-02-15 01:21:37.165 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetById (TASKHIVE) in 404.226ms
+2025-02-15 01:21:37.168 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 01:21:37.172 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users/1 - 200 null application/json; charset=utf-8 439.9915ms
+2025-02-15 17:12:06.059 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 17:12:06.151 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 17:12:06.153 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 17:12:06.244 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 17:12:06.246 +05:30 [INF] Hosting environment: Development
+2025-02-15 17:12:06.247 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 17:12:07.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 17:12:07.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 201.3101ms
+2025-02-15 17:12:07.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 17:12:07.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 67.5125ms
+2025-02-15 17:12:07.426 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 17:12:07.426 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 17:12:07.428 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 17:12:07.431 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 17:12:07.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 17.1585ms
+2025-02-15 17:12:07.489 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 17:12:07.489 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 17:12:07.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 65.1505ms
+2025-02-15 17:12:07.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 67.1521ms
+2025-02-15 17:12:07.495 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 17:12:07.542 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 17:12:07.544 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 117.8239ms
+2025-02-15 17:12:07.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.9034ms
+2025-02-15 17:12:07.718 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 17:12:07.745 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.3198ms
+2025-02-15 17:15:52.435 +05:30 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TaskHiveDB];
+2025-02-15 17:15:52.517 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TaskHiveDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-02-15 17:15:52.533 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 17:15:52.535 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-02-15 17:15:52.554 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-02-15 17:15:52.603 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-02-15 17:15:52.608 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-15 17:15:52.609 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-15 17:15:52.630 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-15 17:15:52.636 +05:30 [INF] Applying migration '20250215114542_inital'.
+2025-02-15 17:15:52.662 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [categoryId] int NOT NULL IDENTITY,
+    [categoryStatus] int NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([categoryId])
+);
+2025-02-15 17:15:52.664 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Labels] (
+    [labelId] int NOT NULL IDENTITY,
+    [lableName] int NOT NULL,
+    CONSTRAINT [PK_Labels] PRIMARY KEY ([labelId])
+);
+2025-02-15 17:15:52.671 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Meetings] (
+    [meetingId] int NOT NULL IDENTITY,
+    [scheduledDate] datetime2 NOT NULL,
+    [meetingLink] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Meetings] PRIMARY KEY ([meetingId])
+);
+2025-02-15 17:15:52.674 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Projects] (
+    [projectId] int NOT NULL IDENTITY,
+    [projectName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Projects] PRIMARY KEY ([projectId])
+);
+2025-02-15 17:15:52.676 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [roleId] int NOT NULL IDENTITY,
+    [roleName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([roleId])
+);
+2025-02-15 17:15:52.681 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Works] (
+    [workId] int NOT NULL IDENTITY,
+    [workName] nvarchar(max) NOT NULL,
+    [description] nvarchar(max) NOT NULL,
+    [duedate] datetime2 NOT NULL,
+    [workPriority] int NOT NULL,
+    [workStatus] int NOT NULL,
+    [categoryId] int NOT NULL,
+    [projectId] int NOT NULL,
+    CONSTRAINT [PK_Works] PRIMARY KEY ([workId]),
+    CONSTRAINT [FK_Works_Categories_categoryId] FOREIGN KEY ([categoryId]) REFERENCES [Categories] ([categoryId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Works_Projects_projectId] FOREIGN KEY ([projectId]) REFERENCES [Projects] ([projectId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.685 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [userId] int NOT NULL IDENTITY,
+    [userName] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [roleId] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([userId]),
+    CONSTRAINT [FK_Users_Roles_roleId] FOREIGN KEY ([roleId]) REFERENCES [Roles] ([roleId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.691 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [WorkLabels] (
+    [workLabelId] int NOT NULL IDENTITY,
+    [workId] int NOT NULL,
+    [labelId] int NOT NULL,
+    CONSTRAINT [PK_WorkLabels] PRIMARY KEY ([workLabelId]),
+    CONSTRAINT [FK_WorkLabels_Labels_labelId] FOREIGN KEY ([labelId]) REFERENCES [Labels] ([labelId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_WorkLabels_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.693 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [reportId] int NOT NULL IDENTITY,
+    [reportDate] datetime2 NOT NULL,
+    [reportContent] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([reportId]),
+    CONSTRAINT [FK_Reports_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.696 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TimeLogs] (
+    [timelogId] int NOT NULL IDENTITY,
+    [logDate] datetime2 NOT NULL,
+    [hoursWorked] int NOT NULL,
+    [userId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_TimeLogs] PRIMARY KEY ([timelogId]),
+    CONSTRAINT [FK_TimeLogs_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_TimeLogs_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.698 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserMeeting] (
+    [userMeetingId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [meetingId] int NOT NULL,
+    CONSTRAINT [PK_UserMeeting] PRIMARY KEY ([userMeetingId]),
+    CONSTRAINT [FK_UserMeeting_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserMeeting_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.701 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserWorks] (
+    [userWorkId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_UserWorks] PRIMARY KEY ([userWorkId]),
+    CONSTRAINT [FK_UserWorks_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserWorks_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-02-15 17:15:52.709 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reports_userId] ON [Reports] ([userId]);
+2025-02-15 17:15:52.711 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_userId] ON [TimeLogs] ([userId]);
+2025-02-15 17:15:54.644 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_workId] ON [TimeLogs] ([workId]);
+2025-02-15 17:15:54.654 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeeting_meetingId] ON [UserMeeting] ([meetingId]);
+2025-02-15 17:15:54.657 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeeting_userId] ON [UserMeeting] ([userId]);
+2025-02-15 17:15:54.659 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_roleId] ON [Users] ([roleId]);
+2025-02-15 17:15:54.661 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserWorks_userId] ON [UserWorks] ([userId]);
+2025-02-15 17:15:54.664 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserWorks_workId] ON [UserWorks] ([workId]);
+2025-02-15 17:15:54.666 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_WorkLabels_labelId] ON [WorkLabels] ([labelId]);
+2025-02-15 17:15:54.667 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_WorkLabels_workId] ON [WorkLabels] ([workId]);
+2025-02-15 17:15:54.669 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Works_categoryId] ON [Works] ([categoryId]);
+2025-02-15 17:15:54.671 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Works_projectId] ON [Works] ([projectId]);
+2025-02-15 17:15:54.684 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250215114542_inital', N'9.0.2');
+2025-02-15 17:15:54.689 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-02-15 17:16:06.422 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 17:16:06.507 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 17:16:06.509 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 17:16:06.587 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 17:16:06.589 +05:30 [INF] Hosting environment: Development
+2025-02-15 17:16:06.590 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 17:16:07.435 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 17:16:07.582 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 153.7157ms
+2025-02-15 17:16:07.587 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 17:16:07.649 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 62.7764ms
+2025-02-15 17:16:07.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 17:16:07.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 17:16:07.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 17:16:07.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 17:16:07.674 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 22.9125ms
+2025-02-15 17:16:07.701 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 17:16:07.701 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 17:16:07.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 52.2957ms
+2025-02-15 17:16:07.704 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 53.2904ms
+2025-02-15 17:16:07.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 17:16:07.747 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 17:16:07.748 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 98.0757ms
+2025-02-15 17:16:07.769 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.8285ms
+2025-02-15 17:16:07.887 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 17:16:07.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.4162ms
+2025-02-15 17:16:27.705 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 50
+2025-02-15 17:16:27.717 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:16:27.727 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 17:16:27.777 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:16:29.884 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 17:16:30.139 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 17:16:30.182 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 17:16:30.261 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 2477.1641ms
+2025-02-15 17:16:30.264 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 17:16:30.278 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 2573.0414ms
+2025-02-15 17:16:42.488 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 44
+2025-02-15 17:16:42.492 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:16:42.493 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 17:16:42.494 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.CreateRoleDto]] Create(TASKHIVE.DTO.Role.CreateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:16:42.578 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__roleDto_roleName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[roleName] = @__roleDto_roleName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 17:16:42.591 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([roleName])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-15 17:16:42.595 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-15 17:16:42.599 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 103.4071ms
+2025-02-15 17:16:42.601 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-15 17:16:42.604 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 116.1557ms
+2025-02-15 17:16:48.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 17:16:48.672 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 17:16:48.679 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:16:48.756 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 17:16:48.780 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 17:16:48.785 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 104.0655ms
+2025-02-15 17:16:48.789 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 17:16:48.792 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 125.8711ms
+2025-02-15 17:16:59.884 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role/1 - null null
+2025-02-15 17:16:59.888 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 17:16:59.897 +05:30 [INF] Route matched with {action = "GetById", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.GetRoleByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:16:59.998 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+WHERE [r].[roleId] = @__p_0
+2025-02-15 17:17:00.005 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Role.GetRoleByIdDto'.
+2025-02-15 17:17:00.009 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetById (TASKHIVE) in 109.7229ms
+2025-02-15 17:17:00.011 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 17:17:00.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role/1 - 200 null application/json; charset=utf-8 128.1877ms
+2025-02-15 17:17:22.635 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/Role/2 - application/json 59
+2025-02-15 17:17:22.650 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:17:22.651 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Update (TASKHIVE)'
+2025-02-15 17:17:22.656 +05:30 [INF] Route matched with {action = "Update", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.Role]] Update(Int32, TASKHIVE.DTO.Role.UpdateRoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:17:22.700 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Roles] SET [roleName] = @p0
+OUTPUT 1
+WHERE [roleId] = @p1;
+2025-02-15 17:17:22.712 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-15 17:17:22.715 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Update (TASKHIVE) in 55.3278ms
+2025-02-15 17:17:22.721 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Update (TASKHIVE)'
+2025-02-15 17:17:22.723 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/Role/2 - 204 null null 87.6427ms
+2025-02-15 17:17:34.326 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role/2 - null null
+2025-02-15 17:17:34.330 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 17:17:34.333 +05:30 [INF] Route matched with {action = "GetById", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.GetRoleByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 17:17:34.342 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+WHERE [r].[roleId] = @__p_0
+2025-02-15 17:17:34.344 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Role.GetRoleByIdDto'.
+2025-02-15 17:17:34.345 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetById (TASKHIVE) in 10.803ms
+2025-02-15 17:17:34.346 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetById (TASKHIVE)'
+2025-02-15 17:17:34.347 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role/2 - 200 null application/json; charset=utf-8 22.2584ms
+2025-02-15 17:21:09.649 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 17:21:09.726 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 17:21:09.730 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 17:21:09.813 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 17:21:09.816 +05:30 [INF] Hosting environment: Development
+2025-02-15 17:21:09.817 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 17:21:10.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 17:21:10.218 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 176.216ms
+2025-02-15 17:21:10.228 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 17:21:10.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 122.1036ms
+2025-02-15 17:21:10.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 17:21:10.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 17:21:10.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 17:21:10.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 17:21:10.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 18.5365ms
+2025-02-15 17:21:10.401 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 17:21:10.401 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 17:21:10.405 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 53.5405ms
+2025-02-15 17:21:10.409 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 56.4655ms
+2025-02-15 17:21:10.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 17:21:10.417 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 17:21:10.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 69.1875ms
+2025-02-15 17:21:10.468 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.1801ms
+2025-02-15 17:21:10.621 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 17:21:10.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.7196ms
+2025-02-15 17:21:52.278 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Users - application/json 117
+2025-02-15 17:21:52.286 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:21:52.291 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 17:21:52.319 +05:30 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.CreateUserDto]] Create(TASKHIVE.DTO.Users.CreateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 17:21:54.728 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__usersDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__usersDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 17:21:55.038 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [password], [roleId], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-02-15 17:21:55.100 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.User'.
+2025-02-15 17:21:55.193 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Create (TASKHIVE) in 2866.8605ms
+2025-02-15 17:21:55.196 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 17:21:55.205 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Users - 201 null application/json; charset=utf-8 2927.6566ms
+2025-02-15 17:22:40.823 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Users - application/json 120
+2025-02-15 17:22:40.827 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:22:40.828 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 17:22:40.830 +05:30 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.CreateUserDto]] Create(TASKHIVE.DTO.Users.CreateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 17:22:40.911 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__usersDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__usersDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-15 17:22:40.921 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [password], [roleId], [userName])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-02-15 17:22:40.924 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.User'.
+2025-02-15 17:22:40.926 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Create (TASKHIVE) in 94.5972ms
+2025-02-15 17:22:40.928 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Create (TASKHIVE)'
+2025-02-15 17:22:40.930 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Users - 201 null application/json; charset=utf-8 106.8967ms
+2025-02-15 17:22:47.892 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users - null null
+2025-02-15 17:22:47.897 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 17:22:47.903 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Users.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 17:22:47.998 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[password], [u].[roleId], [u].[userName]
+FROM [Users] AS [u]
+2025-02-15 17:22:48.029 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Users.GetAllUserDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 17:22:48.035 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE) in 128.6032ms
+2025-02-15 17:22:48.037 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetAll (TASKHIVE)'
+2025-02-15 17:22:48.038 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users - 200 null application/json; charset=utf-8 147.0717ms
+2025-02-15 17:22:57.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Users/2 - null null
+2025-02-15 17:22:57.547 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 17:22:57.554 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Users.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 17:22:57.620 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[password], [u].[roleId], [u].[userName]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-15 17:22:57.631 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.Users.GetUserByIdDto'.
+2025-02-15 17:22:57.635 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.GetById (TASKHIVE) in 79.0297ms
+2025-02-15 17:22:57.637 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.GetById (TASKHIVE)'
+2025-02-15 17:22:57.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Users/2 - 200 null application/json; charset=utf-8 95.7433ms
+2025-02-15 17:23:40.967 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/Users/2 - application/json 127
+2025-02-15 17:23:40.979 +05:30 [INF] CORS policy execution successful.
+2025-02-15 17:23:40.981 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 17:23:40.986 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.User]] Update(Int32, TASKHIVE.DTO.Users.UpdateUserDto) on controller TASKHIVE.Controllers.UsersController (TASKHIVE).
+2025-02-15 17:23:41.034 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [email] = @p0, [password] = @p1, [roleId] = @p2, [userName] = @p3
+OUTPUT 1
+WHERE [userId] = @p4;
+2025-02-15 17:23:41.045 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-02-15 17:23:41.046 +05:30 [INF] Executed action TASKHIVE.Controllers.UsersController.Update (TASKHIVE) in 55.4811ms
+2025-02-15 17:23:41.047 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UsersController.Update (TASKHIVE)'
+2025-02-15 17:23:41.049 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/Users/2 - 204 null null 82.2031ms
+2025-02-15 18:57:16.994 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 18:57:17.122 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 18:57:17.125 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 18:57:17.223 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 18:57:17.225 +05:30 [INF] Hosting environment: Development
+2025-02-15 18:57:17.225 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 18:57:17.617 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 18:57:17.793 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 185.1068ms
+2025-02-15 18:57:17.800 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 18:57:17.861 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 60.9562ms
+2025-02-15 18:57:17.865 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 18:57:17.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 18:57:17.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 18:57:17.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 18:57:17.893 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 18:57:17.900 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 29.8403ms
+2025-02-15 18:57:18.447 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 18:57:18.447 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 18:57:18.451 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 581.3296ms
+2025-02-15 18:57:18.452 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 587.1052ms
+2025-02-15 18:57:18.484 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 590.2991ms
+2025-02-15 18:57:18.487 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 18:57:18.489 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 619.6614ms
+2025-02-15 18:57:18.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 18:57:18.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.676ms
+2025-02-15 18:57:30.609 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Role - null null
+2025-02-15 18:57:30.621 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 18:57:30.675 +05:30 [INF] Route matched with {action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Role.GetAllRoleDto]]] GetAll() on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-15 18:57:33.448 +05:30 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[roleId], [r].[roleName]
+FROM [Roles] AS [r]
+2025-02-15 18:57:33.583 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Role.GetAllRoleDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 18:57:33.604 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE) in 2915.9856ms
+2025-02-15 18:57:33.608 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.GetAll (TASKHIVE)'
+2025-02-15 18:57:33.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Role - 200 null application/json; charset=utf-8 3008.3778ms
+2025-02-15 18:57:46.736 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Category - null null
+2025-02-15 18:57:46.741 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE)'
+2025-02-15 18:57:46.748 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Category.GetAllCategoryDto]]] GetAll() on controller TASKHIVE.Controllers.CategoryController (TASKHIVE).
+2025-02-15 18:57:46.756 +05:30 [INF] Executed action TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE) in 5.9243ms
+2025-02-15 18:57:46.760 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE)'
+2025-02-15 18:57:46.764 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TASKHIVE.IRepository.ICategoryRepository' while attempting to activate 'TASKHIVE.Controllers.CategoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method60(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-15 18:57:46.814 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Category - 500 null text/plain; charset=utf-8 78.3796ms
+2025-02-15 18:59:47.678 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-15 18:59:47.762 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-15 18:59:47.766 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-15 18:59:47.851 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-15 18:59:47.853 +05:30 [INF] Hosting environment: Development
+2025-02-15 18:59:47.854 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-15 18:59:48.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-15 18:59:48.355 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 151.3689ms
+2025-02-15 18:59:48.362 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-15 18:59:48.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 53.4296ms
+2025-02-15 18:59:48.420 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-15 18:59:48.420 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-15 18:59:48.420 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-15 18:59:48.420 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-15 18:59:48.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 15.4996ms
+2025-02-15 18:59:48.452 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-15 18:59:48.478 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-15 18:59:48.479 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-15 18:59:48.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 63.3322ms
+2025-02-15 18:59:48.484 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 64.2967ms
+2025-02-15 18:59:48.497 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-15 18:59:48.499 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 79.0191ms
+2025-02-15 18:59:48.516 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.899ms
+2025-02-15 18:59:48.632 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-15 18:59:48.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.1874ms
+2025-02-15 18:59:57.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/Category - null null
+2025-02-15 18:59:57.291 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE)'
+2025-02-15 18:59:57.313 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.Category.GetAllCategoryDto]]] GetAll() on controller TASKHIVE.Controllers.CategoryController (TASKHIVE).
+2025-02-15 18:59:59.535 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[categoryId], [c].[categoryStatus]
+FROM [Categories] AS [c]
+2025-02-15 18:59:59.611 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.Category.GetAllCategoryDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-15 18:59:59.632 +05:30 [INF] Executed action TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE) in 2310.2404ms
+2025-02-15 18:59:59.638 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.CategoryController.GetAll (TASKHIVE)'
+2025-02-15 18:59:59.649 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/Category - 200 null application/json; charset=utf-8 2371.3312ms
