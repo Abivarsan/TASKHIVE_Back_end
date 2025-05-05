@@ -13,36 +13,24 @@ namespace TASKHIVE.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<Work> Works { get; set; }
         public DbSet<TimeLog> TimeLogs { get; set; }
-        public DbSet<UserMeeting> UserMeetings { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<UserWork> UserWorks { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Label> Labels { get; set; }
-        public DbSet<WorkLabel> WorkLabels { get; set; }
+        public DbSet<WorkSpace> WorkSpaces { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Store UserRole Enum as String
+            modelBuilder.Entity<Role>()
+                .Property(r => r.userRole)
+                .HasConversion<string>();
+
             // Role → Users (One-to-Many)
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.roleId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Users → UserWorks (One-to-Many)
-            modelBuilder.Entity<UserWork>()
-                .HasOne(uw => uw.User)
-                .WithMany(u => u.UserWorks)
-                .HasForeignKey(uw => uw.userId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Work → UserWorks (One-to-Many)
-            modelBuilder.Entity<UserWork>()
-                .HasOne(uw => uw.Work)
-                .WithMany(w => w.UserWorks)
-                .HasForeignKey(uw => uw.workId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Users → TimeLogs (One-to-Many)
             modelBuilder.Entity<TimeLog>()
@@ -51,12 +39,12 @@ namespace TASKHIVE.Data
                 .HasForeignKey(tl => tl.userId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Work → TimeLogs (One-to-Many)
+            // Work → TimeLogs (One-to-Many) 🔥 **Fix this line**
             modelBuilder.Entity<TimeLog>()
                 .HasOne(tl => tl.Work)
                 .WithMany(w => w.TimeLogs)
                 .HasForeignKey(tl => tl.workId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade); 
 
             // Users → Reports (One-to-Many)
             modelBuilder.Entity<Report>()
@@ -65,45 +53,18 @@ namespace TASKHIVE.Data
                 .HasForeignKey(r => r.userId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Users → UserMeetings (One-to-Many)
-            modelBuilder.Entity<UserMeeting>()
-                .HasOne(um => um.User)
-                .WithMany(u => u.UserMeetings)
-                .HasForeignKey(um => um.userId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Meeting → UserMeetings (One-to-Many)
-            modelBuilder.Entity<UserMeeting>()
-                .HasOne(um => um.Meeting)
-                .WithMany(m => m.UserMeetings)
-                .HasForeignKey(um => um.meetingId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Work → Project (One-to-Many)
+            // Project -> Work (One-to-Many) 🔥 **Fix this line**
             modelBuilder.Entity<Work>()
                 .HasOne(w => w.Project)
                 .WithMany(p => p.Works)
                 .HasForeignKey(w => w.projectId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade); 
 
-            // Work → Category (One-to-Many)
-            modelBuilder.Entity<Work>()
-                .HasOne(t => t.Category)
-                .WithMany(c => c.Works)
-                .HasForeignKey(t => t.categoryId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Work → Labels (Many-to-Many)
-            modelBuilder.Entity<WorkLabel>()
-                .HasOne(tl => tl.Work)
-                .WithMany(t => t.WorkLabels)
-                .HasForeignKey(tl => tl.workId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<WorkLabel>()
-                .HasOne(tl => tl.Label)
-                .WithMany(l => l.WorkLabels)
-                .HasForeignKey(tl => tl.labelId)
+            // WorkSpace → Project  (One-to-Many)
+            modelBuilder.Entity<Project>()
+                .HasOne(w => w.WorkSpace)
+                .WithMany(p => p.Projects)
+                .HasForeignKey(w => w.workSpaceId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

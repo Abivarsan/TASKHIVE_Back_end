@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Metrics;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Metrics;
 using TASKHIVE.Data;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
@@ -18,6 +19,12 @@ namespace TASKHIVE.Repository
         {
             _dbContext.Roles.Update(entity);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<Role> GetRoleByUserRole(UserRole userRole)
+        {
+            return await _dbContext.Roles
+                                 .FirstOrDefaultAsync(r => r.userRole == userRole);
         }
     }
 }

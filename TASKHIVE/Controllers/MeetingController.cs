@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TASKHIVE.DTO.Category;
 using TASKHIVE.DTO.Meeting;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
@@ -26,7 +25,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
 
-        public async Task<ActionResult<CreateMeetingDto>> Create([FromBody] CreateMeetingDto meetingDto)
+        public async Task<ActionResult<MeetingDto>> Create([FromBody] MeetingDto meetingDto)
         {
             var result = _meetingRepository.IsRecordExists(x => x.scheduledDate == meetingDto.scheduledDate);
 
@@ -81,7 +80,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Meeting>> Update(int id, [FromBody] UpdateMeetingDto meetingDto)
+        public async Task<ActionResult<Meeting>> Update(int id, [FromBody] MeetingDto meetingDto)
         {
             if (meetingDto == null || id != meetingDto.meetingId)
             {

@@ -14,7 +14,7 @@ namespace TASKHIVE.Model
         [Required]
         public string meetingLink { get; set; }
 
-        public ICollection<UserMeeting> UserMeetings { get; set; }
+        public ICollection<User> Users { get; set; }
 
     }
 }

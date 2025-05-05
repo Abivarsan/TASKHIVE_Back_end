@@ -2,6 +2,12 @@
 
 namespace TASKHIVE.Model
 {
+    public enum CategoryStatus
+    {
+        Development,
+        Testing,
+        Design
+    }
     public enum WorkStatus
     {
         ToDo,
@@ -14,6 +20,13 @@ namespace TASKHIVE.Model
         Low,
         Medium,
         High
+    }
+
+    public enum Label
+    {
+        Urgent,
+        Bug,
+        Feature
     }
 
     public class Work
@@ -36,15 +49,14 @@ namespace TASKHIVE.Model
         [Required]
         public WorkStatus workStatus { get; set; } = WorkStatus.ToDo; // ToDo, InProgress, Completed 
 
-        public int categoryId { get; set; }
-        public Category Category { get; set; } // Task Category
+    
+        public CategoryStatus categoryStatus { get; set; } // Task Category
+
+        public Label label { get; set; } // Label
 
         [Required]
         public int projectId { get; set; }
         public Project Project { get; set; }
-
-        public ICollection<WorkLabel> WorkLabels { get; set; }
-        public ICollection<UserWork> UserWorks { get; set; }
         public ICollection<TimeLog> TimeLogs { get; set; }
     }
 }

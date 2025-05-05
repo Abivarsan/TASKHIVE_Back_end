@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TASKHIVE.Model;
 
 namespace TASKHIVE.DTO.Role
 {
-    public class GetAllLabelDto
+    public class GetAllRoleDto
     {
       
         public int roleId { get; set; }
-        public string roleName { get; set; }
+        public UserRole userRole { get; set; }
     }
 }

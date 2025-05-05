@@ -1,0 +1,81 @@
+2025-02-24 09:51:54.667 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-24 09:51:55.272 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-24 09:51:55.416 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-24 09:51:55.419 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-24 09:51:55.558 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-24 09:51:55.560 +05:30 [INF] Hosting environment: Development
+2025-02-24 09:51:55.561 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-24 09:51:58.770 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-24 09:51:59.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 286.9777ms
+2025-02-24 09:51:59.066 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-24 09:51:59.169 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 103.4905ms
+2025-02-24 09:51:59.209 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-24 09:51:59.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-24 09:51:59.226 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-24 09:51:59.226 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-24 09:51:59.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 31.2814ms
+2025-02-24 09:51:59.271 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-24 09:51:59.271 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-24 09:51:59.282 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 55.5997ms
+2025-02-24 09:51:59.285 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-24 09:51:59.290 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 81.7085ms
+2025-02-24 09:51:59.358 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-24 09:51:59.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 136.4074ms
+2025-02-24 09:51:59.412 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 126.7171ms
+2025-02-24 09:51:59.600 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-24 09:51:59.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.9267ms
+2025-02-24 09:56:05.200 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 112
+2025-02-24 09:56:05.215 +05:30 [INF] CORS policy execution successful.
+2025-02-24 09:56:05.391 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-24 09:56:05.439 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-24 09:56:08.406 +05:30 [INF] Executed DbCommand (159ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-24 09:56:08.596 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__userRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-24 09:56:08.636 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-24 09:56:08.658 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 3203.6398ms
+2025-02-24 09:56:08.665 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-24 09:56:08.680 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 400 null text/plain; charset=utf-8 3480.619ms
+2025-02-24 09:56:15.896 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 112
+2025-02-24 09:56:15.907 +05:30 [INF] CORS policy execution successful.
+2025-02-24 09:56:15.910 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-24 09:56:15.911 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-24 09:56:15.974 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-24 09:56:15.986 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-24 09:56:16.426 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [meetingId], [password], [profilePicture], [roleId], [userName], [workSpaceId])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-02-24 09:56:16.484 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-24 09:56:16.494 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 577.873ms
+2025-02-24 09:56:16.497 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-24 09:56:16.502 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 200 null application/json; charset=utf-8 608.0447ms
+2025-02-24 11:33:57.964 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7219/api/User/register - null null
+2025-02-24 11:33:58.003 +05:30 [INF] CORS policy execution successful.
+2025-02-24 11:33:58.042 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7219/api/User/register - 204 null null 85.2208ms
+2025-02-24 11:34:06.500 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7219/api/User/register - null null
+2025-02-24 11:34:06.509 +05:30 [INF] CORS policy execution successful.
+2025-02-24 11:34:06.512 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7219/api/User/register - 204 null null 12.1304ms
+2025-02-24 11:35:37.219 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7219/api/User/register - null null
+2025-02-24 11:35:37.222 +05:30 [INF] CORS policy execution successful.
+2025-02-24 11:35:37.223 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7219/api/User/register - 204 null null 4.3382ms

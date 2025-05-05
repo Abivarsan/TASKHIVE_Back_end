@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TASKHIVE.DTO.Category;
 using TASKHIVE.DTO.Report;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
@@ -26,7 +24,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
 
-        public async Task<ActionResult<CreateReportDto>> Create([FromBody] CreateReportDto reportDto)
+        public async Task<ActionResult<ReportDto>> Create([FromBody] ReportDto reportDto)
         {
             var result = _reportRepository.IsRecordExists(x => x.reportContent == reportDto.reportContent);
 
@@ -81,14 +79,14 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Report>> Update(int id, [FromBody] UpdateReportDto reportDto)
+        public async Task<ActionResult<Report>> Update(int id, [FromBody] ReportDto reportDto)
         {
             if (reportDto == null || id != reportDto.reportId)
             {
                 return BadRequest();
             }
 
-            var report = _mapper.Map<Report>(ReportDto);
+            var report = _mapper.Map<Report>(reportDto);
 
             await _reportRepository.update(report);
 
@@ -100,23 +98,23 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-        public async Task<ActionResult<Category>> DeleteById(int id)
+        public async Task<ActionResult<Report>> DeleteById(int id)
         {
             if (id == 0)
             {
                 return BadRequest();
             }
 
-            var category = await _categoryRepository.Get(id);
+            var report = await _reportRepository.Get(id);
 
-            if (category == null)
+            if (report == null)
             {
                 return NotFound();
             }
 
-            await _categoryRepository.delete(category);
+            await _reportRepository.delete(report);
             return NoContent();
         }
     }
 }
-}
+

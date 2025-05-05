@@ -17,14 +17,22 @@ namespace TASKHIVE.Model
         [Required]
         public string password { get; set; }
 
+        public string ?profilePicture { get; set; }
 
         [Required]
         public int roleId { get; set; }
         public Role Role { get; set; }
 
-        public ICollection<UserWork> UserWorks { get; set; }
+        public int ?meetingId { get; set; }
+
+        public Meeting meeting { get; set; }
+
+        public int ?workSpaceId { get; set; }
+
+        public WorkSpace workSpace { get; set; }
+
+
         public ICollection<TimeLog> TimeLogs { get; set; }
         public ICollection<Report> Reports { get; set; }
-        public ICollection<UserMeeting> UserMeetings { get; set; }
     }
 }

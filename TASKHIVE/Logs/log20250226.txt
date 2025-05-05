@@ -1,0 +1,36 @@
+2025-02-26 00:17:23.422 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-26 00:17:23.955 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-26 00:17:24.068 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-26 00:17:24.104 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-26 00:17:24.289 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-26 00:17:24.292 +05:30 [INF] Hosting environment: Development
+2025-02-26 00:17:24.294 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-26 00:17:27.924 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-26 00:17:28.194 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 287.6246ms
+2025-02-26 00:17:28.207 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-26 00:17:28.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 89.9397ms
+2025-02-26 00:17:28.353 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-26 00:17:28.441 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-26 00:17:28.444 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 90.9684ms
+2025-02-26 00:17:28.446 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-26 00:17:28.446 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-26 00:17:28.447 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-26 00:17:28.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 30.4454ms
+2025-02-26 00:17:28.501 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-26 00:17:28.501 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-26 00:17:28.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 82.1426ms
+2025-02-26 00:17:28.596 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-26 00:17:28.599 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 153.0265ms
+2025-02-26 00:17:28.636 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 154.2384ms
+2025-02-26 00:17:28.836 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-26 00:17:28.962 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.3527ms
+2025-02-26 00:17:39.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/User - null null
+2025-02-26 00:17:39.956 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.GetAll (TASKHIVE)'
+2025-02-26 00:17:39.991 +05:30 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.User.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-26 00:17:42.700 +05:30 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+2025-02-26 00:17:42.825 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.User.GetAllUserDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-26 00:17:42.836 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.GetAll (TASKHIVE) in 2838.0686ms
+2025-02-26 00:17:42.840 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.GetAll (TASKHIVE)'
+2025-02-26 00:17:42.856 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/User - 200 null application/json; charset=utf-8 3055.6785ms

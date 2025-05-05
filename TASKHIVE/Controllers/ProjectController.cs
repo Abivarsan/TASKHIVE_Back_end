@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TASKHIVE.DTO.Category;
 using TASKHIVE.DTO.Project;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
@@ -26,7 +25,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
 
-        public async Task<ActionResult<CreateProjectDto>> Create([FromBody] CreateProjectDto projectDto)
+        public async Task<ActionResult<ProjectDto>> Create([FromBody] ProjectDto projectDto)
         {
             var result = _projectRepository.IsRecordExists(x => x.projectName == projectDto.projectName);
 
@@ -81,7 +80,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Project>> Update(int id, [FromBody] UpdateProjectDto projectDto)
+        public async Task<ActionResult<Project>> Update(int id, [FromBody] ProjectDto projectDto)
         {
             if (projectDto == null || id != projectDto.projectId)
             {

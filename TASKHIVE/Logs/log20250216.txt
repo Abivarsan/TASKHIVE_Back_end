@@ -1,0 +1,120 @@
+2025-02-16 14:50:21.001 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-16 14:50:21.096 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-16 14:50:21.098 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-16 14:50:21.180 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-16 14:50:21.181 +05:30 [INF] Hosting environment: Development
+2025-02-16 14:50:21.182 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-16 14:50:22.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-16 14:50:22.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 259.6303ms
+2025-02-16 14:50:22.532 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-16 14:50:22.602 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 69.8655ms
+2025-02-16 14:50:22.626 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-16 14:50:22.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-16 14:50:22.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-16 14:50:22.688 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-16 14:50:22.696 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-16 14:50:22.713 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 17.2168ms
+2025-02-16 14:50:22.720 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-16 14:50:22.720 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-16 14:50:22.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 105.1937ms
+2025-02-16 14:50:22.734 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 85.218ms
+2025-02-16 14:50:22.810 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-16 14:50:22.812 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 163.4887ms
+2025-02-16 14:50:22.851 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 162.8485ms
+2025-02-16 14:50:23.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-16 14:50:23.243 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.7483ms
+2025-02-16 14:51:40.484 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-16 14:51:40.520 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-16 14:51:40.550 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-16 14:51:58.479 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-16 14:51:58.514 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-16 14:51:58.529 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-16 14:52:38.268 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-16 14:52:38.295 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-02-16 14:52:38.321 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-02-16 14:52:38.374 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-02-16 14:52:38.381 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-16 14:52:38.381 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-16 14:52:38.391 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-16 14:52:38.397 +05:30 [INF] Applying migration '20250216092225_final1'.
+2025-02-16 14:52:38.429 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeeting] DROP CONSTRAINT [FK_UserMeeting_Meetings_meetingId];
+2025-02-16 14:52:38.431 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeeting] DROP CONSTRAINT [FK_UserMeeting_Users_userId];
+2025-02-16 14:52:38.444 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeeting] DROP CONSTRAINT [PK_UserMeeting];
+2025-02-16 14:52:39.308 +05:30 [INF] Executed DbCommand (864ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[UserMeeting]', N'UserMeetings', 'OBJECT';
+2025-02-16 14:52:39.319 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[TimeLogs].[timelogId]', N'timeLogId', 'COLUMN';
+2025-02-16 14:52:39.324 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Labels].[lableName]', N'labelName', 'COLUMN';
+2025-02-16 14:52:39.329 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[UserMeetings].[IX_UserMeeting_userId]', N'IX_UserMeetings_userId', 'INDEX';
+2025-02-16 14:52:39.335 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[UserMeetings].[IX_UserMeeting_meetingId]', N'IX_UserMeetings_meetingId', 'INDEX';
+2025-02-16 14:52:39.340 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeetings] ADD CONSTRAINT [PK_UserMeetings] PRIMARY KEY ([userMeetingId]);
+2025-02-16 14:52:39.343 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeetings] ADD CONSTRAINT [FK_UserMeetings_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]) ON DELETE CASCADE;
+2025-02-16 14:52:39.346 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [UserMeetings] ADD CONSTRAINT [FK_UserMeetings_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE;
+2025-02-16 14:52:39.352 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250216092225_final1', N'9.0.2');
+2025-02-16 14:52:39.357 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-02-16 14:53:10.331 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-16 14:53:10.425 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-16 14:53:10.429 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-16 14:53:10.499 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-16 14:53:10.500 +05:30 [INF] Hosting environment: Development
+2025-02-16 14:53:10.503 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-16 14:53:10.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-16 14:53:11.170 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 233.7367ms
+2025-02-16 14:53:11.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-16 14:53:11.267 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-16 14:53:11.267 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 90.0061ms
+2025-02-16 14:53:11.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-16 14:53:11.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-16 14:53:11.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-16 14:53:11.305 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 13.3939ms
+2025-02-16 14:53:11.310 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-16 14:53:11.310 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-16 14:53:11.313 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 46.8539ms
+2025-02-16 14:53:11.315 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-16 14:53:11.316 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 33.5256ms
+2025-02-16 14:53:11.368 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-16 14:53:11.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 87.7384ms
+2025-02-16 14:53:11.391 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.1489ms
+2025-02-16 14:53:11.587 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-16 14:53:11.687 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.4951ms

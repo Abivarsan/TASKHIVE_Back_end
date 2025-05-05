@@ -1,6 +1,6 @@
 ﻿namespace TASKHIVE.DTO.TimeLog
 {
-    public class GetTimeLogById
+    public class GetTimeLogByIdDto
     {
         public int timelogId { get; set; }
         public DateTime logDate { get; set; }

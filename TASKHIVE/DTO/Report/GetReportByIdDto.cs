@@ -3,7 +3,7 @@ using TASKHIVE.Model;
 
 namespace TASKHIVE.DTO.Report
 {
-    public class GetReportById
+    public class GetReportByIdDto
     {
         public int reportId { get; set; }
         public DateTime reportDate { get; set; }

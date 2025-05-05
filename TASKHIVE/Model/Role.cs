@@ -2,6 +2,15 @@
 
 namespace TASKHIVE.Model
 {
+    public enum UserRole
+    {
+        AD,
+        PM,
+        SE,
+        Dev,
+        QA,
+        UI
+    }
     public class Role
     {
         [Key]
@@ -9,7 +18,7 @@ namespace TASKHIVE.Model
         public int roleId { get; set; }
 
         [Required]
-        public string roleName { get; set; }
+        public UserRole userRole { get; set; }
 
         public ICollection<User> Users { get; set; }
     }

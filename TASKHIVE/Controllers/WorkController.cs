@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TASKHIVE.DTO.Category;
+using TASKHIVE.DTO.Work;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
 
@@ -11,12 +11,12 @@ namespace TASKHIVE.Controllers
     [ApiController]
     public class WorkController : ControllerBase
     {
-        private readonly ICategoryRepository _categoryRepository;
+        private readonly IWorkRepository _workRepository;
         private readonly IMapper _mapper;
-        private readonly ILogger<CategoryController> _logger;
-        public CategoryController(ICategoryRepository categoryRepository, IMapper mapper, ILogger<CategoryController> logger)
+        private readonly ILogger<WorkController> _logger;
+        public WorkController(IWorkRepository workRepository, IMapper mapper, ILogger<WorkController> logger)
         {
-            _categoryRepository = categoryRepository;
+            _workRepository = workRepository;
             _mapper = mapper;
             _logger = logger;
         }
@@ -25,71 +25,71 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
 
-        public async Task<ActionResult<CreateCategoryDto>> Create([FromBody] CreateCategoryDto categoryDto)
+        public async Task<ActionResult<WorkDto>> Create([FromBody] WorkDto workDto)
         {
-            var result = _categoryRepository.IsRecordExists(x => x.categoryStatus == categoryDto.categoryStatus);
+            var result = _workRepository.IsRecordExists(x => x.workName == workDto.workName);
 
             if (result)
             {
-                return Conflict("Category already exists");
+                return Conflict("Work Name already exists");
             }
-            var category = _mapper.Map<Category>(categoryDto);
+            var work = _mapper.Map<Work>(workDto);
 
-            await _categoryRepository.create(category);
+            await _workRepository.create(work);
 
-            return CreatedAtAction("GetById", new { id = category.categoryId }, category);
+            return CreatedAtAction("GetById", new { id = work.workId }, work);
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<ActionResult<IEnumerable<GetAllCategoryDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<GetAllWorkDto>>> GetAll()
         {
-            var categories = await _categoryRepository.GetAll();
+            var works = await _workRepository.GetAll();
 
-            var categoriesDto = _mapper.Map<List<GetAllCategoryDto>>(categories);
+            var worksDto = _mapper.Map<List<GetAllWorkDto>>(works);
 
-            if (categories == null)
+            if (works == null)
             {
                 return NoContent();
             }
 
-            return Ok(categoriesDto);
+            return Ok(worksDto);
         }
 
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<ActionResult<GetCategoryByIdDto>> GetById(int id)
+        public async Task<ActionResult<GetWorkByIdDto>> GetById(int id)
         {
-            var category = await _categoryRepository.Get(id);
+            var work = await _workRepository.Get(id);
 
 
 
-            if (category == null)
+            if (work == null)
             {
                 _logger.LogError($"Error while try to get record id: {id}");
                 return NoContent();
             }
-            var categoryDto = _mapper.Map<GetCategoryByIdDto>(category);
+            var workDto = _mapper.Map<GetWorkByIdDto>(work);
 
-            return Ok(categoryDto);
+            return Ok(workDto);
         }
 
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Category>> Update(int id, [FromBody] UpdateCategoryDto categoryDto)
+        public async Task<ActionResult<Work>> Update(int id, [FromBody] WorkDto workDto)
         {
-            if (categoryDto == null || id != categoryDto.categoryId)
+            if (workDto == null || id != workDto.workId)
             {
                 return BadRequest();
             }
 
-            var category = _mapper.Map<Category>(categoryDto);
+            var work = _mapper.Map<Work>(workDto);
 
-            await _categoryRepository.update(category);
+            await _workRepository.update(work);
 
             return NoContent();
         }
@@ -99,23 +99,23 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-        public async Task<ActionResult<Category>> DeleteById(int id)
+        public async Task<ActionResult<Work>> DeleteById(int id)
         {
             if (id == 0)
             {
                 return BadRequest();
             }
 
-            var category = await _categoryRepository.Get(id);
+            var work = await _workRepository.Get(id);
 
-            if (category == null)
+            if (work == null)
             {
                 return NotFound();
             }
 
-            await _categoryRepository.delete(category);
+            await _workRepository.delete(work);
             return NoContent();
         }
     }
 }
-}
+

@@ -1,0 +1,1075 @@
+2025-02-20 13:39:30.502 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:39:30.891 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:39:30.976 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:39:30.978 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:39:31.095 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:39:31.098 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:39:31.099 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:40:54.660 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:40:54.892 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 244.6049ms
+2025-02-20 13:40:54.899 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:40:54.960 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 61.1607ms
+2025-02-20 13:40:54.989 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:40:55.002 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:40:55.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:40:55.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:40:55.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:40:55.045 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 42.9671ms
+2025-02-20 13:40:55.052 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:40:55.052 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:40:55.058 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 69.0822ms
+2025-02-20 13:40:55.058 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 55.5877ms
+2025-02-20 13:40:55.096 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:40:55.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 95.8564ms
+2025-02-20 13:40:55.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.258ms
+2025-02-20 13:40:55.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:40:55.293 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/favicon-32x32.png - null null
+2025-02-20 13:40:55.296 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-02-20 13:40:55.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/favicon-32x32.png - 200 628 image/png 4.8085ms
+2025-02-20 13:40:55.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.0716ms
+2025-02-20 13:41:22.115 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 13:41:22.123 +05:30 [INF] CORS policy execution successful.
+2025-02-20 13:41:22.209 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 13:41:22.257 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 13:41:24.007 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 13:43:12.032 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:43:12.268 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:43:12.327 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:43:12.331 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:43:12.517 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:43:12.524 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:43:12.525 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:43:13.339 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:43:13.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 114.3514ms
+2025-02-20 13:43:13.452 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:43:13.506 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 54.6943ms
+2025-02-20 13:43:13.530 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:43:13.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:43:13.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:43:13.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:43:13.565 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:43:13.578 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 39.9514ms
+2025-02-20 13:43:13.588 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:43:13.588 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:43:13.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 52.9307ms
+2025-02-20 13:43:13.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 60.1559ms
+2025-02-20 13:43:13.678 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:43:13.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.7021ms
+2025-02-20 13:43:13.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 144.4072ms
+2025-02-20 13:43:13.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:43:13.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.7938ms
+2025-02-20 13:43:21.427 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:43:21.635 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:43:21.699 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:43:21.700 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:43:21.797 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:43:21.800 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:43:21.801 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:43:22.354 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:43:22.492 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 143.5983ms
+2025-02-20 13:43:22.501 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:43:22.569 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 68.4146ms
+2025-02-20 13:43:22.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:43:22.582 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:43:22.582 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:43:22.582 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:43:22.600 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:43:22.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 26.7255ms
+2025-02-20 13:43:22.680 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:43:22.680 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:43:22.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 109.7886ms
+2025-02-20 13:43:22.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 102.6625ms
+2025-02-20 13:43:22.709 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:43:22.711 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 128.6947ms
+2025-02-20 13:43:22.728 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.6235ms
+2025-02-20 13:43:22.854 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:43:22.904 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.0588ms
+2025-02-20 13:43:57.184 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 13:43:57.189 +05:30 [INF] CORS policy execution successful.
+2025-02-20 13:43:57.267 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 13:43:57.294 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 13:43:58.681 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 13:46:01.806 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:46:02.088 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:46:02.165 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:46:02.167 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:46:02.311 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:46:02.313 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:46:02.314 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:46:02.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:46:02.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 156.4136ms
+2025-02-20 13:46:02.921 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:46:02.991 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 69.0995ms
+2025-02-20 13:46:03.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:46:03.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:46:03.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:46:03.036 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:46:03.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 44.6605ms
+2025-02-20 13:46:03.088 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:46:03.088 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:46:03.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 93.7014ms
+2025-02-20 13:46:03.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 80.8249ms
+2025-02-20 13:46:03.095 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:46:03.150 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:46:03.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 140.2854ms
+2025-02-20 13:46:03.185 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.7907ms
+2025-02-20 13:46:03.349 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:46:03.450 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.4165ms
+2025-02-20 13:46:28.568 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 13:46:28.576 +05:30 [INF] CORS policy execution successful.
+2025-02-20 13:46:28.663 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 13:46:28.688 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 13:46:30.947 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 13:55:30.346 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:55:30.609 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:55:30.680 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:55:30.682 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:55:30.786 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:55:30.788 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:55:30.789 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:55:31.200 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:55:31.325 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 135.8683ms
+2025-02-20 13:55:31.334 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:55:31.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 550.2885ms
+2025-02-20 13:55:31.889 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:55:31.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:55:31.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:55:31.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:55:31.961 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:55:31.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 76.3601ms
+2025-02-20 13:55:32.004 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:55:32.004 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:55:32.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 116.3714ms
+2025-02-20 13:55:32.008 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 119.51ms
+2025-02-20 13:55:32.044 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:55:32.047 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 157.2978ms
+2025-02-20 13:55:32.048 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.0595ms
+2025-02-20 13:55:32.184 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:55:32.250 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.0559ms
+2025-02-20 13:55:41.022 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 13:55:41.242 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 13:55:41.311 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 13:55:41.313 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 13:55:41.397 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 13:55:41.400 +05:30 [INF] Hosting environment: Development
+2025-02-20 13:55:41.401 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 13:55:41.873 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 13:55:42.018 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 152.4753ms
+2025-02-20 13:55:42.025 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 13:55:42.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 73.1302ms
+2025-02-20 13:55:42.110 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 13:55:42.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 13:55:42.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 13:55:42.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 13:55:42.127 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 13:55:42.142 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 17.8213ms
+2025-02-20 13:55:42.152 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 13:55:42.152 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 13:55:42.161 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 36.2062ms
+2025-02-20 13:55:42.163 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 52.7816ms
+2025-02-20 13:55:42.185 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 13:55:42.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 60.3905ms
+2025-02-20 13:55:42.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.2884ms
+2025-02-20 13:55:42.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 13:55:42.392 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.865ms
+2025-02-20 13:56:03.237 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 13:56:03.246 +05:30 [INF] CORS policy execution successful.
+2025-02-20 13:56:03.314 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 13:56:03.340 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 13:56:04.766 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 14:03:25.119 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:03:25.389 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:03:25.453 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:03:25.454 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:03:25.533 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:03:25.534 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:03:25.535 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:03:26.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:03:26.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 145.0072ms
+2025-02-20 14:03:26.421 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:03:26.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 53.3653ms
+2025-02-20 14:03:26.490 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:03:26.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:03:26.497 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:03:26.497 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:03:26.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 24.0193ms
+2025-02-20 14:03:26.557 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:03:26.557 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:03:26.560 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 69.5236ms
+2025-02-20 14:03:26.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:03:26.563 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 70.4845ms
+2025-02-20 14:03:26.600 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:03:26.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 112.1568ms
+2025-02-20 14:03:26.640 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.4818ms
+2025-02-20 14:03:26.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:03:26.829 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.2483ms
+2025-02-20 14:04:13.815 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 137
+2025-02-20 14:04:13.823 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:04:13.920 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:04:13.958 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:04:30.042 +05:30 [ERR] An error occurred using the connection to database 'TaskHiveDB' on server 'ABIVARSAN\SQLEXPRESS'.
+2025-02-20 14:04:30.120 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'TASKHIVE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=76; handshake=25; [Login] initialization=3; authentication=6; [Post-Login] complete=14014; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:def5286d-bdb0-4a87-ad73-296e3c6c24a3
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=76; handshake=25; [Login] initialization=3; authentication=6; [Post-Login] complete=14014; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:def5286d-bdb0-4a87-ad73-296e3c6c24a3
+Error Number:-2,State:0,Class:11
+2025-02-20 14:04:30.346 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 16382.4767ms
+2025-02-20 14:04:30.350 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:04:30.354 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=76; handshake=25; [Login] initialization=3; authentication=6; [Post-Login] complete=14014; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method20(Closure, QueryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at TASKHIVE.Repository.GenericRepository`1.IsRecordExists(Expression`1 condtion) in C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE\Repository\GenericRepository.cs:line 42
+   at TASKHIVE.Controllers.UserController.Create(UserDto userDto) in C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE\Controllers\UserController.cs:line 134
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:def5286d-bdb0-4a87-ad73-296e3c6c24a3
+Error Number:-2,State:0,Class:11
+2025-02-20 14:04:30.456 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 500 null text/plain; charset=utf-8 16641.3922ms
+2025-02-20 14:04:36.009 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 137
+2025-02-20 14:04:36.013 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:04:36.015 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:04:36.016 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:11:17.400 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:11:17.779 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:11:17.848 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:11:17.850 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:11:17.978 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:11:17.980 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:11:17.981 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:11:18.607 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:11:18.805 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 211.7258ms
+2025-02-20 14:11:18.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:11:18.891 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 80.1619ms
+2025-02-20 14:11:18.917 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:11:18.924 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:11:18.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:11:18.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:11:18.951 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:11:18.961 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 36.6678ms
+2025-02-20 14:11:18.985 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:11:18.986 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:11:19.045 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 120.3158ms
+2025-02-20 14:11:19.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 139.2645ms
+2025-02-20 14:11:19.100 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:11:19.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.8363ms
+2025-02-20 14:11:19.108 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 184.3766ms
+2025-02-20 14:11:19.316 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:11:19.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.7224ms
+2025-02-20 14:11:40.861 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 14:11:40.867 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:11:40.932 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 14:11:40.956 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:11:42.282 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 14:14:53.168 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:14:53.358 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:14:53.405 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:14:53.406 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:14:53.488 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:14:53.489 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:14:53.490 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:14:53.989 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:14:54.131 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 152.8181ms
+2025-02-20 14:14:54.137 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:14:54.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 62.7718ms
+2025-02-20 14:14:54.207 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:14:54.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:14:54.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:14:54.215 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:14:54.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 30.1265ms
+2025-02-20 14:14:54.258 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:14:54.259 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:14:54.264 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 49.8859ms
+2025-02-20 14:14:54.264 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 57.4024ms
+2025-02-20 14:14:54.266 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:14:54.267 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:14:54.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 55.429ms
+2025-02-20 14:14:54.321 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.2401ms
+2025-02-20 14:14:54.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:14:54.974 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.567ms
+2025-02-20 14:15:16.973 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 51
+2025-02-20 14:15:16.980 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:15:17.094 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 14:15:17.130 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:15:19.256 +05:30 [INF] Executed DbCommand (83ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 14:15:19.657 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-20 14:15:19.670 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Login (TASKHIVE) in 2532.6459ms
+2025-02-20 14:15:19.676 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 14:15:19.686 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/login - 200 null application/json; charset=utf-8 2713.2307ms
+2025-02-20 14:32:56.126 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:32:56.326 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:32:56.380 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:32:56.383 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:32:56.488 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:32:56.495 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:32:56.495 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:32:56.700 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:32:57.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 511.9625ms
+2025-02-20 14:32:57.210 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:32:57.261 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 50.3031ms
+2025-02-20 14:32:57.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:32:57.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:32:57.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:32:57.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:32:57.316 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 40.7854ms
+2025-02-20 14:32:57.344 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:32:57.344 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:32:57.349 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 73.6796ms
+2025-02-20 14:32:57.349 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 74.3424ms
+2025-02-20 14:32:57.349 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:32:57.353 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:32:57.353 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 77.8282ms
+2025-02-20 14:32:57.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.9192ms
+2025-02-20 14:32:57.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:32:57.606 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.9244ms
+2025-02-20 14:33:40.456 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 113
+2025-02-20 14:33:40.462 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:33:40.564 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:40.615 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:33:42.585 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:33:42.735 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:33:42.754 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-20 14:33:42.761 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 2139.6885ms
+2025-02-20 14:33:42.765 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:42.774 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 400 null text/plain; charset=utf-8 2318.4845ms
+2025-02-20 14:33:52.786 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 113
+2025-02-20 14:33:52.801 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:33:52.803 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:52.804 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:33:52.881 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:33:52.899 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:33:52.904 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-20 14:33:52.906 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 99.8979ms
+2025-02-20 14:33:52.907 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:52.908 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 400 null text/plain; charset=utf-8 121.7836ms
+2025-02-20 14:33:56.809 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 113
+2025-02-20 14:33:56.812 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:33:56.815 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:56.817 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:33:56.848 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:33:56.857 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:33:56.859 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-20 14:33:56.860 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 40.8658ms
+2025-02-20 14:33:56.861 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:33:56.863 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 400 null text/plain; charset=utf-8 53.8066ms
+2025-02-20 14:34:49.284 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 113
+2025-02-20 14:34:49.295 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:34:49.297 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:34:49.299 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:34:49.306 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:34:49.314 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:34:49.799 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [meetingId], [password], [profilePicture], [roleId], [userName], [workSpaceId])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-02-20 14:34:49.837 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-20 14:34:49.848 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 547.4551ms
+2025-02-20 14:34:49.850 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:34:49.853 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 200 null application/json; charset=utf-8 569.3902ms
+2025-02-20 14:35:06.136 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 113
+2025-02-20 14:35:06.149 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:35:06.150 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:06.151 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:35:06.169 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:35:06.171 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-02-20 14:35:06.173 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 19.1226ms
+2025-02-20 14:35:06.174 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:06.176 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 409 null text/plain; charset=utf-8 40.6485ms
+2025-02-20 14:35:16.485 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 114
+2025-02-20 14:35:16.487 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:35:16.490 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:16.499 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:35:16.506 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:35:16.510 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-02-20 14:35:16.511 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 7.1012ms
+2025-02-20 14:35:16.513 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:16.514 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 409 null text/plain; charset=utf-8 28.5271ms
+2025-02-20 14:35:26.903 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 114
+2025-02-20 14:35:26.906 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:35:26.916 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:26.916 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:35:26.920 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:35:26.929 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:35:26.933 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-02-20 14:35:26.935 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 17.3656ms
+2025-02-20 14:35:26.937 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:35:26.939 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 400 null text/plain; charset=utf-8 36.0068ms
+2025-02-20 14:36:40.755 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 37
+2025-02-20 14:36:40.767 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:36:40.768 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:36:40.773 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.RoleDto]] Create(TASKHIVE.DTO.Role.RoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-20 14:36:40.802 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__roleDto_userRole_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[userRole] = @__roleDto_userRole_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:36:40.813 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([userRole])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-20 14:36:40.819 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-20 14:36:40.874 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 98.422ms
+2025-02-20 14:36:40.876 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:36:40.877 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 122.3911ms
+2025-02-20 14:43:33.588 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:43:33.745 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:43:33.782 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:43:33.783 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:43:33.854 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:43:33.855 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:43:33.857 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:43:34.539 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:43:34.644 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 109.4309ms
+2025-02-20 14:43:34.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:43:34.713 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 63.6003ms
+2025-02-20 14:43:34.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:43:34.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:43:34.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:43:34.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:43:34.752 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 24.7059ms
+2025-02-20 14:43:34.781 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:43:34.787 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:43:34.807 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 80.5014ms
+2025-02-20 14:43:34.808 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 86.2371ms
+2025-02-20 14:43:34.813 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:43:34.816 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:43:34.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 98.9093ms
+2025-02-20 14:43:34.858 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.3255ms
+2025-02-20 14:43:34.961 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:43:35.020 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.3838ms
+2025-02-20 14:47:10.633 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:47:10.788 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:47:10.829 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:47:10.832 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:47:10.902 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:47:10.903 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:47:10.904 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:47:11.194 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:47:11.325 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 134.5988ms
+2025-02-20 14:47:11.332 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:47:11.393 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 61.117ms
+2025-02-20 14:47:11.405 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:47:11.415 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:47:11.415 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:47:11.415 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:47:11.434 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 18.1503ms
+2025-02-20 14:47:11.494 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:47:11.494 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:47:11.499 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 83.9277ms
+2025-02-20 14:47:11.502 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 96.7871ms
+2025-02-20 14:47:11.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:47:11.514 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:47:11.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 102.7797ms
+2025-02-20 14:47:11.564 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.5134ms
+2025-02-20 14:47:11.681 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:47:11.748 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.7318ms
+2025-02-20 14:48:00.194 +05:30 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TaskHiveDB];
+2025-02-20 14:48:00.268 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TaskHiveDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-02-20 14:48:00.281 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-20 14:48:00.283 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-02-20 14:48:00.304 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-02-20 14:48:00.353 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-02-20 14:48:00.359 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-02-20 14:48:00.360 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-02-20 14:48:00.375 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-02-20 14:48:00.381 +05:30 [INF] Applying migration '20250220091751_inital'.
+2025-02-20 14:48:00.400 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Meetings] (
+    [meetingId] int NOT NULL IDENTITY,
+    [scheduledDate] datetime2 NOT NULL,
+    [meetingLink] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Meetings] PRIMARY KEY ([meetingId])
+);
+2025-02-20 14:48:00.402 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [roleId] int NOT NULL IDENTITY,
+    [userRole] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([roleId])
+);
+2025-02-20 14:48:00.404 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [WorkSpaces] (
+    [workSpaceId] int NOT NULL IDENTITY,
+    [workSpaceName] nvarchar(max) NULL,
+    CONSTRAINT [PK_WorkSpaces] PRIMARY KEY ([workSpaceId])
+);
+2025-02-20 14:48:00.409 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Projects] (
+    [projectId] int NOT NULL IDENTITY,
+    [projectName] nvarchar(max) NOT NULL,
+    [workSpaceId] int NOT NULL,
+    CONSTRAINT [PK_Projects] PRIMARY KEY ([projectId]),
+    CONSTRAINT [FK_Projects_WorkSpaces_workSpaceId] FOREIGN KEY ([workSpaceId]) REFERENCES [WorkSpaces] ([workSpaceId]) ON DELETE CASCADE
+);
+2025-02-20 14:48:00.412 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [userId] int NOT NULL IDENTITY,
+    [userName] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [profilePicture] nvarchar(max) NULL,
+    [roleId] int NOT NULL,
+    [meetingId] int NULL,
+    [workSpaceId] int NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([userId]),
+    CONSTRAINT [FK_Users_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]),
+    CONSTRAINT [FK_Users_Roles_roleId] FOREIGN KEY ([roleId]) REFERENCES [Roles] ([roleId]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Users_WorkSpaces_workSpaceId] FOREIGN KEY ([workSpaceId]) REFERENCES [WorkSpaces] ([workSpaceId])
+);
+2025-02-20 14:48:00.416 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Works] (
+    [workId] int NOT NULL IDENTITY,
+    [workName] nvarchar(max) NOT NULL,
+    [description] nvarchar(max) NOT NULL,
+    [duedate] datetime2 NOT NULL,
+    [workPriority] int NOT NULL,
+    [workStatus] int NOT NULL,
+    [categoryStatus] int NOT NULL,
+    [label] int NOT NULL,
+    [projectId] int NOT NULL,
+    CONSTRAINT [PK_Works] PRIMARY KEY ([workId]),
+    CONSTRAINT [FK_Works_Projects_projectId] FOREIGN KEY ([projectId]) REFERENCES [Projects] ([projectId]) ON DELETE CASCADE
+);
+2025-02-20 14:48:00.419 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [reportId] int NOT NULL IDENTITY,
+    [reportDate] datetime2 NOT NULL,
+    [reportContent] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([reportId]),
+    CONSTRAINT [FK_Reports_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-02-20 14:48:00.425 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TimeLogs] (
+    [timeLogId] int NOT NULL IDENTITY,
+    [logDate] datetime2 NOT NULL,
+    [hoursWorked] int NOT NULL,
+    [userId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_TimeLogs] PRIMARY KEY ([timeLogId]),
+    CONSTRAINT [FK_TimeLogs_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_TimeLogs_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-02-20 14:48:00.429 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Projects_workSpaceId] ON [Projects] ([workSpaceId]);
+2025-02-20 14:48:00.431 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reports_userId] ON [Reports] ([userId]);
+2025-02-20 14:48:00.432 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_userId] ON [TimeLogs] ([userId]);
+2025-02-20 14:48:00.435 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_workId] ON [TimeLogs] ([workId]);
+2025-02-20 14:48:00.436 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_meetingId] ON [Users] ([meetingId]);
+2025-02-20 14:48:00.437 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_roleId] ON [Users] ([roleId]);
+2025-02-20 14:48:00.439 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_workSpaceId] ON [Users] ([workSpaceId]);
+2025-02-20 14:48:00.440 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Works_projectId] ON [Works] ([projectId]);
+2025-02-20 14:48:00.444 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250220091751_inital', N'9.0.2');
+2025-02-20 14:48:00.451 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-02-20 14:48:10.239 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:48:10.406 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:48:10.455 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:48:10.458 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:48:10.523 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:48:10.524 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:48:10.526 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:48:10.953 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:48:11.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 114.1498ms
+2025-02-20 14:48:11.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:48:11.124 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 57.01ms
+2025-02-20 14:48:11.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:48:11.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:48:11.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:48:11.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:48:11.150 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 7.5367ms
+2025-02-20 14:48:11.194 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:48:11.194 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:48:11.198 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 59.3803ms
+2025-02-20 14:48:11.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 57.6605ms
+2025-02-20 14:48:11.199 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:48:11.201 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:48:11.213 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 71.4854ms
+2025-02-20 14:48:11.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.043ms
+2025-02-20 14:48:11.935 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:48:11.996 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.4146ms
+2025-02-20 14:48:26.783 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 37
+2025-02-20 14:48:26.793 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:48:26.905 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:48:26.943 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.RoleDto]] Create(TASKHIVE.DTO.Role.RoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-20 14:48:28.989 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__roleDto_userRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[userRole] = @__roleDto_userRole_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:48:29.258 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([userRole])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-20 14:48:29.298 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-20 14:48:29.350 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 2399.5417ms
+2025-02-20 14:48:29.352 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:48:29.360 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 2577.9728ms
+2025-02-20 14:50:02.884 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/Role - application/json 37
+2025-02-20 14:50:02.893 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:50:02.895 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:50:02.897 +05:30 [INF] Route matched with {action = "Create", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.Role.RoleDto]] Create(TASKHIVE.DTO.Role.RoleDto) on controller TASKHIVE.Controllers.RoleController (TASKHIVE).
+2025-02-20 14:50:03.077 +05:30 [INF] Executed DbCommand (97ms) [Parameters=[@__roleDto_userRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]
+        WHERE [r].[userRole] = @__roleDto_userRole_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:50:03.101 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Roles] ([userRole])
+OUTPUT INSERTED.[roleId]
+VALUES (@p0);
+2025-02-20 14:50:03.109 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TASKHIVE.Model.Role'.
+2025-02-20 14:50:03.115 +05:30 [INF] Executed action TASKHIVE.Controllers.RoleController.Create (TASKHIVE) in 216.6881ms
+2025-02-20 14:50:03.119 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.RoleController.Create (TASKHIVE)'
+2025-02-20 14:50:03.121 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/Role - 201 null application/json; charset=utf-8 237.5426ms
+2025-02-20 14:56:21.635 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:56:21.848 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:56:21.891 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:56:21.892 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:56:21.959 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:56:21.960 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:56:21.961 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:56:22.571 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:56:22.671 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 104.6913ms
+2025-02-20 14:56:22.678 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:56:22.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 52.8722ms
+2025-02-20 14:56:22.738 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:56:22.744 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:56:22.744 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:56:22.745 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:56:22.782 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 37.7461ms
+2025-02-20 14:56:22.798 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:56:22.798 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:56:22.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 65.6489ms
+2025-02-20 14:56:22.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 58.3977ms
+2025-02-20 14:56:22.805 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:56:22.806 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:56:22.810 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 65.9034ms
+2025-02-20 14:56:22.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.3047ms
+2025-02-20 14:56:22.956 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:56:23.009 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.1644ms
+2025-02-20 14:56:45.247 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 14:56:45.430 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 14:56:45.468 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 14:56:45.471 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 14:56:45.535 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 14:56:45.537 +05:30 [INF] Hosting environment: Development
+2025-02-20 14:56:45.539 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 14:56:45.926 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 14:56:46.045 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 126.501ms
+2025-02-20 14:56:46.050 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 14:56:46.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 52.1655ms
+2025-02-20 14:56:46.114 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 14:56:46.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 14:56:46.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 14:56:46.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 14:56:46.136 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 21.3492ms
+2025-02-20 14:56:46.165 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 14:56:46.166 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 14:56:46.171 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 55.9649ms
+2025-02-20 14:56:46.171 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 56.5344ms
+2025-02-20 14:56:46.174 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 14:56:46.220 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 14:56:46.222 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 107.4789ms
+2025-02-20 14:56:46.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 94.1988ms
+2025-02-20 14:56:46.384 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 14:56:46.428 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.0264ms
+2025-02-20 14:57:23.535 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/register - application/json 108
+2025-02-20 14:57:23.542 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:57:23.644 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:57:23.694 +05:30 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.UserDto]] Create(TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:57:26.176 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__userDto_email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[email] = @__userDto_email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-02-20 14:57:26.308 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__userRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[roleId], [r].[userRole]
+FROM [Roles] AS [r]
+WHERE [r].[userRole] = @__userRole_0
+2025-02-20 14:57:26.746 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([email], [meetingId], [password], [profilePicture], [roleId], [userName], [workSpaceId])
+OUTPUT INSERTED.[userId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-02-20 14:57:26.802 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-20 14:57:26.829 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Create (TASKHIVE) in 3127.7211ms
+2025-02-20 14:57:26.833 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Create (TASKHIVE)'
+2025-02-20 14:57:26.844 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/register - 200 null application/json; charset=utf-8 3308.9886ms
+2025-02-20 14:58:03.196 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 52
+2025-02-20 14:58:03.208 +05:30 [INF] CORS policy execution successful.
+2025-02-20 14:58:03.210 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 14:58:03.218 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 14:58:03.365 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[email] = @__email_0
+2025-02-20 14:58:03.519 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-20 14:58:03.523 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Login (TASKHIVE) in 302.3512ms
+2025-02-20 14:58:03.525 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 14:58:03.529 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/login - 200 null application/json; charset=utf-8 333.9061ms
+2025-02-20 15:05:52.530 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 15:05:52.705 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 15:05:52.746 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 15:05:52.748 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 15:05:52.854 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 15:05:52.855 +05:30 [INF] Hosting environment: Development
+2025-02-20 15:05:52.856 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 15:05:53.068 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 15:05:53.204 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 146.2963ms
+2025-02-20 15:05:53.211 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 15:05:53.271 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 59.315ms
+2025-02-20 15:05:53.280 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 15:05:53.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 15:05:53.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 15:05:53.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 15:05:53.318 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 31.8328ms
+2025-02-20 15:05:53.329 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 15:05:53.329 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 15:05:53.334 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 48.3722ms
+2025-02-20 15:05:53.335 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 54.2751ms
+2025-02-20 15:05:53.342 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 15:05:53.352 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 15:05:53.355 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 69.3518ms
+2025-02-20 15:05:53.399 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.0984ms
+2025-02-20 15:05:53.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 15:05:53.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.3433ms
+2025-02-20 15:06:40.312 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7219/api/User/login - application/json 52
+2025-02-20 15:06:40.319 +05:30 [INF] CORS policy execution successful.
+2025-02-20 15:06:40.420 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 15:06:40.474 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TASKHIVE.DTO.User.LoginDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 15:06:42.859 +05:30 [INF] Executed DbCommand (105ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId], [r].[roleId], [r].[userRole]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[roleId] = [r].[roleId]
+WHERE [u].[email] = @__email_0
+2025-02-20 15:06:43.194 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-20 15:06:43.204 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Login (TASKHIVE) in 2722.0444ms
+2025-02-20 15:06:43.205 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Login (TASKHIVE)'
+2025-02-20 15:06:43.216 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7219/api/User/login - 200 null application/json; charset=utf-8 2904.4879ms
+2025-02-20 15:08:01.213 +05:30 [INF] User profile is available. Using 'C:\Users\kethe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-20 15:08:01.372 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-20 15:08:01.411 +05:30 [INF] Now listening on: https://localhost:7219
+2025-02-20 15:08:01.412 +05:30 [INF] Now listening on: http://localhost:5138
+2025-02-20 15:08:01.482 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-20 15:08:01.483 +05:30 [INF] Hosting environment: Development
+2025-02-20 15:08:01.484 +05:30 [INF] Content root path: C:\Users\kethe\OneDrive\Documents\Individual Project\TASKHIVE\Back_end\Work\TASKHIVE
+2025-02-20 15:08:01.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger - null null
+2025-02-20 15:08:01.912 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger - 301 0 null 108.568ms
+2025-02-20 15:08:01.917 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-02-20 15:08:01.989 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 200 null text/html;charset=utf-8 72.372ms
+2025-02-20 15:08:02.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - null null
+2025-02-20 15:08:02.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - null null
+2025-02-20 15:08:02.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - null null
+2025-02-20 15:08:02.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-20 15:08:02.039 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 37.7041ms
+2025-02-20 15:08:02.053 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-02-20 15:08:02.053 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-02-20 15:08:02.054 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-02-20 15:08:02.055 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 53.8367ms
+2025-02-20 15:08:02.055 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui.css - 200 152034 text/css 54.3951ms
+2025-02-20 15:08:02.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 55.0741ms
+2025-02-20 15:08:02.059 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-02-20 15:08:02.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.958ms
+2025-02-20 15:08:02.205 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-02-20 15:08:02.247 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.8306ms
+2025-02-20 15:08:18.806 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/User - null null
+2025-02-20 15:08:18.907 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.GetAll (TASKHIVE)'
+2025-02-20 15:08:18.944 +05:30 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[TASKHIVE.DTO.User.GetAllUserDto]]] GetAll() on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 15:08:20.857 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+2025-02-20 15:08:21.014 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TASKHIVE.DTO.User.GetAllUserDto, TASKHIVE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-20 15:08:21.032 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.GetAll (TASKHIVE) in 2078.6216ms
+2025-02-20 15:08:21.035 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.GetAll (TASKHIVE)'
+2025-02-20 15:08:21.044 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/User - 200 null application/json; charset=utf-8 2238.5424ms
+2025-02-20 15:08:32.249 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7219/api/User/1 - null null
+2025-02-20 15:08:32.266 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.GetById (TASKHIVE)'
+2025-02-20 15:08:32.291 +05:30 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.DTO.User.GetUserByIdDto]] GetById(Int32) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 15:08:32.631 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[userId], [u].[email], [u].[meetingId], [u].[password], [u].[profilePicture], [u].[roleId], [u].[userName], [u].[workSpaceId]
+FROM [Users] AS [u]
+WHERE [u].[userId] = @__p_0
+2025-02-20 15:08:32.643 +05:30 [INF] Executing OkObjectResult, writing value of type 'TASKHIVE.DTO.User.GetUserByIdDto'.
+2025-02-20 15:08:32.647 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.GetById (TASKHIVE) in 352.526ms
+2025-02-20 15:08:32.649 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.GetById (TASKHIVE)'
+2025-02-20 15:08:32.651 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7219/api/User/1 - 200 null application/json; charset=utf-8 403.0618ms
+2025-02-20 15:09:25.527 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/User/1 - application/json 111
+2025-02-20 15:09:25.546 +05:30 [INF] CORS policy execution successful.
+2025-02-20 15:09:25.549 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Update (TASKHIVE)'
+2025-02-20 15:09:25.554 +05:30 [INF] Route matched with {action = "Update", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.User]] Update(Int32, TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 15:09:25.599 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-20 15:09:25.619 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Update (TASKHIVE) in 61.811ms
+2025-02-20 15:09:25.621 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Update (TASKHIVE)'
+2025-02-20 15:09:25.623 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/User/1 - 400 null application/problem+json; charset=utf-8 96.7178ms
+2025-02-20 15:09:43.317 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7219/api/User/1 - application/json 111
+2025-02-20 15:09:43.320 +05:30 [INF] CORS policy execution successful.
+2025-02-20 15:09:43.321 +05:30 [INF] Executing endpoint 'TASKHIVE.Controllers.UserController.Update (TASKHIVE)'
+2025-02-20 15:09:43.323 +05:30 [INF] Route matched with {action = "Update", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TASKHIVE.Model.User]] Update(Int32, TASKHIVE.DTO.User.UserDto) on controller TASKHIVE.Controllers.UserController (TASKHIVE).
+2025-02-20 15:09:43.329 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-20 15:09:43.330 +05:30 [INF] Executed action TASKHIVE.Controllers.UserController.Update (TASKHIVE) in 3.4614ms
+2025-02-20 15:09:43.332 +05:30 [INF] Executed endpoint 'TASKHIVE.Controllers.UserController.Update (TASKHIVE)'
+2025-02-20 15:09:43.333 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7219/api/User/1 - 400 null application/problem+json; charset=utf-8 16.6541ms

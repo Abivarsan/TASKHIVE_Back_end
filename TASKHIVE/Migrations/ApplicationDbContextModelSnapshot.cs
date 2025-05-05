@@ -22,38 +22,6 @@ namespace TASKHIVE.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("TASKHIVE.Model.Category", b =>
-                {
-                    b.Property<int>("categoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("categoryId"));
-
-                    b.Property<int>("categoryStatus")
-                        .HasColumnType("int");
-
-                    b.HasKey("categoryId");
-
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.Label", b =>
-                {
-                    b.Property<int>("labelId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("labelId"));
-
-                    b.Property<int>("lableName")
-                        .HasColumnType("int");
-
-                    b.HasKey("labelId");
-
-                    b.ToTable("Labels");
-                });
-
             modelBuilder.Entity("TASKHIVE.Model.Meeting", b =>
                 {
                     b.Property<int>("meetingId")
@@ -86,7 +54,12 @@ namespace TASKHIVE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("workSpaceId")
+                        .HasColumnType("int");
+
                     b.HasKey("projectId");
+
+                    b.HasIndex("workSpaceId");
 
                     b.ToTable("Projects");
                 });
@@ -124,7 +97,7 @@ namespace TASKHIVE.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("roleId"));
 
-                    b.Property<string>("roleName")
+                    b.Property<string>("userRole")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -135,11 +108,11 @@ namespace TASKHIVE.Migrations
 
             modelBuilder.Entity("TASKHIVE.Model.TimeLog", b =>
                 {
-                    b.Property<int>("timelogId")
+                    b.Property<int>("timeLogId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("timelogId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("timeLogId"));
 
                     b.Property<int>("hoursWorked")
                         .HasColumnType("int");
@@ -153,7 +126,7 @@ namespace TASKHIVE.Migrations
                     b.Property<int>("workId")
                         .HasColumnType("int");
 
-                    b.HasKey("timelogId");
+                    b.HasKey("timeLogId");
 
                     b.HasIndex("userId");
 
@@ -174,8 +147,14 @@ namespace TASKHIVE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("meetingId")
+                        .HasColumnType("int");
+
                     b.Property<string>("password")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("profilePicture")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("roleId")
@@ -185,57 +164,18 @@ namespace TASKHIVE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("workSpaceId")
+                        .HasColumnType("int");
+
                     b.HasKey("userId");
-
-                    b.HasIndex("roleId");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.UserMeeting", b =>
-                {
-                    b.Property<int>("userMeetingId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userMeetingId"));
-
-                    b.Property<int>("meetingId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
-
-                    b.HasKey("userMeetingId");
 
                     b.HasIndex("meetingId");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("roleId");
 
-                    b.ToTable("UserMeeting");
-                });
+                    b.HasIndex("workSpaceId");
 
-            modelBuilder.Entity("TASKHIVE.Model.UserWork", b =>
-                {
-                    b.Property<int>("userWorkId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userWorkId"));
-
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("workId")
-                        .HasColumnType("int");
-
-                    b.HasKey("userWorkId");
-
-                    b.HasIndex("userId");
-
-                    b.HasIndex("workId");
-
-                    b.ToTable("UserWorks");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Work", b =>
@@ -246,7 +186,7 @@ namespace TASKHIVE.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("workId"));
 
-                    b.Property<int>("categoryId")
+                    b.Property<int>("categoryStatus")
                         .HasColumnType("int");
 
                     b.Property<string>("description")
@@ -255,6 +195,9 @@ namespace TASKHIVE.Migrations
 
                     b.Property<DateTime>("duedate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("label")
+                        .HasColumnType("int");
 
                     b.Property<int>("projectId")
                         .HasColumnType("int");
@@ -271,34 +214,36 @@ namespace TASKHIVE.Migrations
 
                     b.HasKey("workId");
 
-                    b.HasIndex("categoryId");
-
                     b.HasIndex("projectId");
 
                     b.ToTable("Works");
                 });
 
-            modelBuilder.Entity("TASKHIVE.Model.WorkLabel", b =>
+            modelBuilder.Entity("TASKHIVE.Model.WorkSpace", b =>
                 {
-                    b.Property<int>("workLabelId")
+                    b.Property<int>("workSpaceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("workLabelId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("workSpaceId"));
 
-                    b.Property<int>("labelId")
-                        .HasColumnType("int");
+                    b.Property<string>("workSpaceName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("workId")
-                        .HasColumnType("int");
+                    b.HasKey("workSpaceId");
 
-                    b.HasKey("workLabelId");
+                    b.ToTable("WorkSpaces");
+                });
 
-                    b.HasIndex("labelId");
+            modelBuilder.Entity("TASKHIVE.Model.Project", b =>
+                {
+                    b.HasOne("TASKHIVE.Model.WorkSpace", "WorkSpace")
+                        .WithMany("Projects")
+                        .HasForeignKey("workSpaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasIndex("workId");
-
-                    b.ToTable("WorkLabels");
+                    b.Navigation("WorkSpace");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Report", b =>
@@ -333,104 +278,41 @@ namespace TASKHIVE.Migrations
 
             modelBuilder.Entity("TASKHIVE.Model.User", b =>
                 {
+                    b.HasOne("TASKHIVE.Model.Meeting", "meeting")
+                        .WithMany("Users")
+                        .HasForeignKey("meetingId");
+
                     b.HasOne("TASKHIVE.Model.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("roleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("TASKHIVE.Model.WorkSpace", "workSpace")
+                        .WithMany("Users")
+                        .HasForeignKey("workSpaceId");
 
                     b.Navigation("Role");
-                });
 
-            modelBuilder.Entity("TASKHIVE.Model.UserMeeting", b =>
-                {
-                    b.HasOne("TASKHIVE.Model.Meeting", "Meeting")
-                        .WithMany("UserMeetings")
-                        .HasForeignKey("meetingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("meeting");
 
-                    b.HasOne("TASKHIVE.Model.User", "User")
-                        .WithMany("UserMeetings")
-                        .HasForeignKey("userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Meeting");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.UserWork", b =>
-                {
-                    b.HasOne("TASKHIVE.Model.User", "User")
-                        .WithMany("UserWorks")
-                        .HasForeignKey("userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TASKHIVE.Model.Work", "Work")
-                        .WithMany("UserWorks")
-                        .HasForeignKey("workId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-
-                    b.Navigation("Work");
+                    b.Navigation("workSpace");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Work", b =>
                 {
-                    b.HasOne("TASKHIVE.Model.Category", "Category")
-                        .WithMany("Works")
-                        .HasForeignKey("categoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TASKHIVE.Model.Project", "Project")
                         .WithMany("Works")
                         .HasForeignKey("projectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
-
                     b.Navigation("Project");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.WorkLabel", b =>
-                {
-                    b.HasOne("TASKHIVE.Model.Label", "Label")
-                        .WithMany("WorkLabels")
-                        .HasForeignKey("labelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TASKHIVE.Model.Work", "Work")
-                        .WithMany("WorkLabels")
-                        .HasForeignKey("workId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Label");
-
-                    b.Navigation("Work");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.Category", b =>
-                {
-                    b.Navigation("Works");
-                });
-
-            modelBuilder.Entity("TASKHIVE.Model.Label", b =>
-                {
-                    b.Navigation("WorkLabels");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Meeting", b =>
                 {
-                    b.Navigation("UserMeetings");
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Project", b =>
@@ -448,19 +330,18 @@ namespace TASKHIVE.Migrations
                     b.Navigation("Reports");
 
                     b.Navigation("TimeLogs");
-
-                    b.Navigation("UserMeetings");
-
-                    b.Navigation("UserWorks");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Work", b =>
                 {
                     b.Navigation("TimeLogs");
+                });
 
-                    b.Navigation("UserWorks");
+            modelBuilder.Entity("TASKHIVE.Model.WorkSpace", b =>
+                {
+                    b.Navigation("Projects");
 
-                    b.Navigation("WorkLabels");
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }
