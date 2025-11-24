@@ -20,6 +20,8 @@ namespace TASKHIVE.DTO.Users
 
         [Required]
         public int roleId { get; set; }
- 
+
+        [Required]
+        public int userCategoryId { get; set; }
     }
 }

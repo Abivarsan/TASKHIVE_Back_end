@@ -4,6 +4,7 @@ using TASKHIVE.DTO.Role;
 using TASKHIVE.DTO.Users;
 using TASKHIVE.Model;
 using TASKHIVE.DTO.Report;
+using TASKHIVE.DTO.UserCategory;
 
 namespace TASKHIVE.Common
 {
@@ -30,6 +31,11 @@ namespace TASKHIVE.Common
             CreateMap<Report, UpdateReportDto>().ReverseMap();
             CreateMap<Report, GetReportByIdDto>().ReverseMap();
             CreateMap<Report, GetAllReportDto>().ReverseMap();
+
+            CreateMap<UserCategory, CreateUserCategoryDto>().ReverseMap();
+            CreateMap<UserCategory, UpdateUserCategoryDto>().ReverseMap();
+            CreateMap<UserCategory, GetUserCategoryByIdDto>().ReverseMap();
+            CreateMap<UserCategory, GetAllUserCategoryDto>().ReverseMap();
 
         }
         

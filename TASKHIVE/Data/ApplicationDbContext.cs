@@ -11,6 +11,7 @@ namespace TASKHIVE.Data
         public DbSet<Meeting> Meetings { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<UserCategory> UserCategories { get; set; }
         public DbSet<Work> Works { get; set; }
         public DbSet<TimeLog> TimeLogs { get; set; }
         public DbSet<UserMeeting> UserMeetings { get; set; }
@@ -28,6 +29,13 @@ namespace TASKHIVE.Data
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.roleId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // UserCategory → Users (One-to-Many)
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.UserCategory)
+                .WithMany(r => r.Users)
+                .HasForeignKey(u => u.userCategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Users → UserWorks (One-to-Many)

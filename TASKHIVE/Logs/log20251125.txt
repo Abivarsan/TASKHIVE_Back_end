@@ -1,0 +1,187 @@
+2025-11-25 00:13:25.481 +05:30 [INF] Now listening on: http://localhost:5138
+2025-11-25 00:13:25.747 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-25 00:13:25.750 +05:30 [INF] Hosting environment: Development
+2025-11-25 00:13:25.752 +05:30 [INF] Content root path: C:\Users\kethe\Documents\Individual Project\Own\BackEnd\TASKHIVE
+2025-11-25 00:13:27.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/index.html - null null
+2025-11-25 00:13:28.699 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/index.html - 200 null text/html;charset=utf-8 742.9982ms
+2025-11-25 00:13:28.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_vs/browserLink - null null
+2025-11-25 00:13:28.769 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-25 00:13:28.831 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 62.2321ms
+2025-11-25 00:13:28.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_vs/browserLink - 200 null text/javascript; charset=UTF-8 211.6909ms
+2025-11-25 00:13:29.055 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - null null
+2025-11-25 00:13:29.559 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 503.7923ms
+2025-11-25 00:42:55.169 +05:30 [INF] Executed DbCommand (439ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TaskHiveDB];
+2025-11-25 00:42:55.339 +05:30 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TaskHiveDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-11-25 00:42:55.367 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-25 00:42:55.370 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-11-25 00:42:55.414 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-11-25 00:42:55.489 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-11-25 00:42:55.500 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-25 00:42:55.501 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-25 00:42:55.536 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-25 00:42:55.545 +05:30 [INF] Applying migration '20251124191154_inital'.
+2025-11-25 00:42:55.588 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [categoryId] int NOT NULL IDENTITY,
+    [categoryStatus] int NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([categoryId])
+);
+2025-11-25 00:42:55.593 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Labels] (
+    [labelId] int NOT NULL IDENTITY,
+    [labelName] int NOT NULL,
+    CONSTRAINT [PK_Labels] PRIMARY KEY ([labelId])
+);
+2025-11-25 00:42:55.599 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Meetings] (
+    [meetingId] int NOT NULL IDENTITY,
+    [scheduledDate] datetime2 NOT NULL,
+    [meetingLink] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Meetings] PRIMARY KEY ([meetingId])
+);
+2025-11-25 00:42:55.603 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Projects] (
+    [projectId] int NOT NULL IDENTITY,
+    [projectName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Projects] PRIMARY KEY ([projectId])
+);
+2025-11-25 00:42:55.606 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [roleId] int NOT NULL IDENTITY,
+    [roleName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([roleId])
+);
+2025-11-25 00:42:55.611 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserCategories] (
+    [userCategoryId] int NOT NULL IDENTITY,
+    [userCategoryName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_UserCategories] PRIMARY KEY ([userCategoryId])
+);
+2025-11-25 00:42:55.620 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Works] (
+    [workId] int NOT NULL IDENTITY,
+    [workName] nvarchar(max) NOT NULL,
+    [description] nvarchar(max) NOT NULL,
+    [duedate] datetime2 NOT NULL,
+    [workPriority] int NOT NULL,
+    [workStatus] int NOT NULL,
+    [categoryId] int NOT NULL,
+    [projectId] int NOT NULL,
+    CONSTRAINT [PK_Works] PRIMARY KEY ([workId]),
+    CONSTRAINT [FK_Works_Categories_categoryId] FOREIGN KEY ([categoryId]) REFERENCES [Categories] ([categoryId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Works_Projects_projectId] FOREIGN KEY ([projectId]) REFERENCES [Projects] ([projectId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.627 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [userId] int NOT NULL IDENTITY,
+    [userName] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [roleId] int NOT NULL,
+    [userCategoryId] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([userId]),
+    CONSTRAINT [FK_Users_Roles_roleId] FOREIGN KEY ([roleId]) REFERENCES [Roles] ([roleId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Users_UserCategories_userCategoryId] FOREIGN KEY ([userCategoryId]) REFERENCES [UserCategories] ([userCategoryId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.631 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [WorkLabels] (
+    [workLabelId] int NOT NULL IDENTITY,
+    [workId] int NOT NULL,
+    [labelId] int NOT NULL,
+    CONSTRAINT [PK_WorkLabels] PRIMARY KEY ([workLabelId]),
+    CONSTRAINT [FK_WorkLabels_Labels_labelId] FOREIGN KEY ([labelId]) REFERENCES [Labels] ([labelId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_WorkLabels_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.901 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [reportId] int NOT NULL IDENTITY,
+    [reportDate] datetime2 NOT NULL,
+    [reportContent] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([reportId]),
+    CONSTRAINT [FK_Reports_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.905 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TimeLogs] (
+    [timelogId] int NOT NULL IDENTITY,
+    [logDate] datetime2 NOT NULL,
+    [hoursWorked] int NOT NULL,
+    [userId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_TimeLogs] PRIMARY KEY ([timelogId]),
+    CONSTRAINT [FK_TimeLogs_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_TimeLogs_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.912 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserMeetings] (
+    [userMeetingId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [meetingId] int NOT NULL,
+    CONSTRAINT [PK_UserMeetings] PRIMARY KEY ([userMeetingId]),
+    CONSTRAINT [FK_UserMeetings_Meetings_meetingId] FOREIGN KEY ([meetingId]) REFERENCES [Meetings] ([meetingId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserMeetings_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.915 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserWorks] (
+    [userWorkId] int NOT NULL IDENTITY,
+    [userId] int NOT NULL,
+    [workId] int NOT NULL,
+    CONSTRAINT [PK_UserWorks] PRIMARY KEY ([userWorkId]),
+    CONSTRAINT [FK_UserWorks_Users_userId] FOREIGN KEY ([userId]) REFERENCES [Users] ([userId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserWorks_Works_workId] FOREIGN KEY ([workId]) REFERENCES [Works] ([workId]) ON DELETE CASCADE
+);
+2025-11-25 00:42:55.922 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reports_userId] ON [Reports] ([userId]);
+2025-11-25 00:42:55.924 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_userId] ON [TimeLogs] ([userId]);
+2025-11-25 00:42:55.926 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TimeLogs_workId] ON [TimeLogs] ([workId]);
+2025-11-25 00:42:55.929 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeetings_meetingId] ON [UserMeetings] ([meetingId]);
+2025-11-25 00:42:55.930 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserMeetings_userId] ON [UserMeetings] ([userId]);
+2025-11-25 00:42:55.932 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_roleId] ON [Users] ([roleId]);
+2025-11-25 00:42:55.935 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_userCategoryId] ON [Users] ([userCategoryId]);
+2025-11-25 00:42:55.937 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserWorks_userId] ON [UserWorks] ([userId]);
+2025-11-25 00:42:55.938 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserWorks_workId] ON [UserWorks] ([workId]);
+2025-11-25 00:42:55.940 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_WorkLabels_labelId] ON [WorkLabels] ([labelId]);
+2025-11-25 00:42:55.944 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_WorkLabels_workId] ON [WorkLabels] ([workId]);
+2025-11-25 00:42:59.326 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Works_categoryId] ON [Works] ([categoryId]);
+2025-11-25 00:42:59.329 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Works_projectId] ON [Works] ([projectId]);
+2025-11-25 00:42:59.340 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251124191154_inital', N'9.0.2');
+2025-11-25 00:42:59.352 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result

@@ -48,6 +48,7 @@ builder.Host.UseSerilog((context, config) =>
 builder.Services.AddTransient<IRoleRepository, RoleRepository>();
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();  
+builder.Services.AddTransient<IUserCategoryRepository, UserCategoryRepository>();
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 

@@ -30,7 +30,7 @@ namespace TASKHIVE.Migrations
                 {
                     labelId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    lableName = table.Column<int>(type: "int", nullable: false)
+                    labelName = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -78,6 +78,19 @@ namespace TASKHIVE.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserCategories",
+                columns: table => new
+                {
+                    userCategoryId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    userCategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserCategories", x => x.userCategoryId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Works",
                 columns: table => new
                 {
@@ -117,7 +130,8 @@ namespace TASKHIVE.Migrations
                     userName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    roleId = table.Column<int>(type: "int", nullable: false)
+                    roleId = table.Column<int>(type: "int", nullable: false),
+                    userCategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -127,6 +141,12 @@ namespace TASKHIVE.Migrations
                         column: x => x.roleId,
                         principalTable: "Roles",
                         principalColumn: "roleId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Users_UserCategories_userCategoryId",
+                        column: x => x.userCategoryId,
+                        principalTable: "UserCategories",
+                        principalColumn: "userCategoryId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -206,7 +226,7 @@ namespace TASKHIVE.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserMeeting",
+                name: "UserMeetings",
                 columns: table => new
                 {
                     userMeetingId = table.Column<int>(type: "int", nullable: false)
@@ -216,15 +236,15 @@ namespace TASKHIVE.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserMeeting", x => x.userMeetingId);
+                    table.PrimaryKey("PK_UserMeetings", x => x.userMeetingId);
                     table.ForeignKey(
-                        name: "FK_UserMeeting_Meetings_meetingId",
+                        name: "FK_UserMeetings_Meetings_meetingId",
                         column: x => x.meetingId,
                         principalTable: "Meetings",
                         principalColumn: "meetingId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UserMeeting_Users_userId",
+                        name: "FK_UserMeetings_Users_userId",
                         column: x => x.userId,
                         principalTable: "Users",
                         principalColumn: "userId",
@@ -273,19 +293,24 @@ namespace TASKHIVE.Migrations
                 column: "workId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserMeeting_meetingId",
-                table: "UserMeeting",
+                name: "IX_UserMeetings_meetingId",
+                table: "UserMeetings",
                 column: "meetingId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserMeeting_userId",
-                table: "UserMeeting",
+                name: "IX_UserMeetings_userId",
+                table: "UserMeetings",
                 column: "userId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_roleId",
                 table: "Users",
                 column: "roleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_userCategoryId",
+                table: "Users",
+                column: "userCategoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserWorks_userId",
@@ -328,7 +353,7 @@ namespace TASKHIVE.Migrations
                 name: "TimeLogs");
 
             migrationBuilder.DropTable(
-                name: "UserMeeting");
+                name: "UserMeetings");
 
             migrationBuilder.DropTable(
                 name: "UserWorks");
@@ -350,6 +375,9 @@ namespace TASKHIVE.Migrations
 
             migrationBuilder.DropTable(
                 name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "UserCategories");
 
             migrationBuilder.DropTable(
                 name: "Categories");

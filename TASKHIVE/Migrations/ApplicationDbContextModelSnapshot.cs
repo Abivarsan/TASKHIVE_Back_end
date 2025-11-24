@@ -46,7 +46,7 @@ namespace TASKHIVE.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("labelId"));
 
-                    b.Property<int>("lableName")
+                    b.Property<int>("labelName")
                         .HasColumnType("int");
 
                     b.HasKey("labelId");
@@ -181,6 +181,9 @@ namespace TASKHIVE.Migrations
                     b.Property<int>("roleId")
                         .HasColumnType("int");
 
+                    b.Property<int>("userCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("userName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -189,7 +192,26 @@ namespace TASKHIVE.Migrations
 
                     b.HasIndex("roleId");
 
+                    b.HasIndex("userCategoryId");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("TASKHIVE.Model.UserCategory", b =>
+                {
+                    b.Property<int>("userCategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("userCategoryId"));
+
+                    b.Property<string>("userCategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("userCategoryId");
+
+                    b.ToTable("UserCategories");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.UserMeeting", b =>
@@ -212,7 +234,7 @@ namespace TASKHIVE.Migrations
 
                     b.HasIndex("userId");
 
-                    b.ToTable("UserMeeting");
+                    b.ToTable("UserMeetings");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.UserWork", b =>
@@ -339,7 +361,15 @@ namespace TASKHIVE.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("TASKHIVE.Model.UserCategory", "UserCategory")
+                        .WithMany("Users")
+                        .HasForeignKey("userCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Role");
+
+                    b.Navigation("UserCategory");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.UserMeeting", b =>
@@ -452,6 +482,11 @@ namespace TASKHIVE.Migrations
                     b.Navigation("UserMeetings");
 
                     b.Navigation("UserWorks");
+                });
+
+            modelBuilder.Entity("TASKHIVE.Model.UserCategory", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("TASKHIVE.Model.Work", b =>
