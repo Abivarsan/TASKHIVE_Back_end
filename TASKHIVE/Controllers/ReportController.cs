@@ -15,6 +15,7 @@ namespace TASKHIVE.Controllers
         private readonly IReportRepository _reportRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<ReportController> _logger;
+        private readonly ICategoryRepository _categoryRepository;
         public ReportController(IReportRepository reportRepository, IMapper mapper, ILogger<ReportController> logger)
         {
             _reportRepository = reportRepository;
@@ -88,7 +89,7 @@ namespace TASKHIVE.Controllers
                 return BadRequest();
             }
 
-            var report = _mapper.Map<Report>(ReportDto);
+            var report = _mapper.Map<Report>(reportDto);
 
             await _reportRepository.update(report);
 
@@ -118,5 +119,4 @@ namespace TASKHIVE.Controllers
             return NoContent();
         }
     }
-}
 }

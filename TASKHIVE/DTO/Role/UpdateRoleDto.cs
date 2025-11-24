@@ -2,7 +2,7 @@
 
 namespace TASKHIVE.DTO.Role
 {
-    public class UpdateLabelDto
+    public class UpdateRoleDto
     {
         [Key]
         [Required]

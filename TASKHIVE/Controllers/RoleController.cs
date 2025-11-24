@@ -24,7 +24,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
 
-        public async Task<ActionResult<CreateLabelDto>> Create([FromBody] CreateLabelDto roleDto)
+        public async Task<ActionResult<CreateRoleDto>> Create([FromBody] CreateRoleDto roleDto)
         {
             var result = _roleRepository.IsRecordExists(x => x.roleName == roleDto.roleName);
 
@@ -42,11 +42,11 @@ namespace TASKHIVE.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<ActionResult<IEnumerable<GetAllLabelDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<GetAllRoleDto>>> GetAll()
         {
             var roles = await _roleRepository.GetAll();
 
-            var rolesDto = _mapper.Map<List<GetAllLabelDto>>(roles);
+            var rolesDto = _mapper.Map<List<GetAllRoleDto>>(roles);
 
             if (roles == null)
             {
@@ -59,7 +59,7 @@ namespace TASKHIVE.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<ActionResult<GetLabelByIdDto>> GetById(int id)
+        public async Task<ActionResult<GetRoleByIdDto>> GetById(int id)
         {
             var role = await _roleRepository.Get(id);
 
@@ -70,7 +70,7 @@ namespace TASKHIVE.Controllers
                 _logger.LogError($"Error while try to get record id: {id}");
                 return NoContent();
             }
-            var roleDto = _mapper.Map<GetLabelByIdDto>(role);
+            var roleDto = _mapper.Map<GetRoleByIdDto>(role);
 
             return Ok(roleDto);
         }
@@ -79,7 +79,7 @@ namespace TASKHIVE.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Role>> Update(int id, [FromBody] UpdateLabelDto roleDto)
+        public async Task<ActionResult<Role>> Update(int id, [FromBody] UpdateRoleDto roleDto)
         {
             if (roleDto == null || id != roleDto.roleId)
             {

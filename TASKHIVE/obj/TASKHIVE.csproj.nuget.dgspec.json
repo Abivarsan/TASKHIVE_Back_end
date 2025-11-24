@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\TASKHIVE.csproj": {}
+    "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\TASKHIVE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\TASKHIVE.csproj": {
+    "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\TASKHIVE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\TASKHIVE.csproj",
+        "projectUniqueName": "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\TASKHIVE.csproj",
         "projectName": "TASKHIVE",
-        "projectPath": "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\TASKHIVE.csproj",
+        "projectPath": "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\TASKHIVE.csproj",
         "packagesPath": "C:\\Users\\kethe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\obj\\",
+        "outputPath": "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

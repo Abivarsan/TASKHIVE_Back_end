@@ -1,0 +1,110 @@
+2025-11-24 13:47:03.674 +05:30 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.
+To generate a developer certificate run 'dotnet dev-certs https'. To trust the certificate (Windows and macOS only) run 'dotnet dev-certs https --trust'.
+For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
+   at Microsoft.AspNetCore.Hosting.ListenOptionsHttpsExtensions.UseHttps(ListenOptions listenOptions, Action`1 configureOptions)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-24 19:19:00.945 +05:30 [INF] Now listening on: http://localhost:5138
+2025-11-24 19:19:01.141 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-24 19:19:01.143 +05:30 [INF] Hosting environment: Development
+2025-11-24 19:19:01.145 +05:30 [INF] Content root path: C:\Users\kethe\Documents\Individual Project\Own\BackEnd\TASKHIVE
+2025-11-24 19:19:01.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger - null null
+2025-11-24 19:19:01.800 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger - 301 0 null 267.1426ms
+2025-11-24 19:19:01.808 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/index.html - null null
+2025-11-24 19:19:01.890 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/index.html - 200 null text/html;charset=utf-8 82.7339ms
+2025-11-24 19:19:01.918 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui.css - null null
+2025-11-24 19:19:01.930 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui-bundle.js - null null
+2025-11-24 19:19:01.930 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-24 19:19:01.943 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-24 19:19:01.944 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_vs/browserLink - null null
+2025-11-24 19:19:01.969 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 25.66ms
+2025-11-24 19:19:01.975 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-24 19:19:01.975 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-24 19:19:01.978 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui.css - 200 152034 text/css 60.7536ms
+2025-11-24 19:19:01.982 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 52.0164ms
+2025-11-24 19:19:01.997 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-24 19:19:02.005 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 75.1887ms
+2025-11-24 19:19:02.063 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.9307ms
+2025-11-24 19:19:02.667 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - null null
+2025-11-24 19:19:02.667 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/favicon-32x32.png - null null
+2025-11-24 19:19:02.677 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-11-24 19:19:02.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/favicon-32x32.png - 200 628 image/png 11.2675ms
+2025-11-24 19:19:02.721 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - TASKHIVE.Controllers.RoleController.Create (TASKHIVE). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - TASKHIVE.DTO.Role.CreateLabelDto. See inner exception
+ ---> System.InvalidOperationException: Can't use schemaId "$CreateLabelDto" for type "$TASKHIVE.DTO.Role.CreateLabelDto". The same schemaId is already used for type "$TASKHIVE.DTO.Label.CreateLabelDto"
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaRepository.RegisterType(Type type, String schemaId)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateReferencedSchema(DataContract dataContract, SchemaRepository schemaRepository, Func`1 definitionFactory)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateConcreteSchema(DataContract dataContract, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForParameter(Type modelType, SchemaRepository schemaRepository, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromBodyParameter(ApiDescription apiDescription, SchemaRepository schemaRepository, ApiParameterDescription bodyParameter)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBody(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-24 19:19:02.733 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 65.7082ms
+2025-11-24 19:19:17.628 +05:30 [INF] Now listening on: http://localhost:5138
+2025-11-24 19:19:17.748 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-24 19:19:17.749 +05:30 [INF] Hosting environment: Development
+2025-11-24 19:19:17.751 +05:30 [INF] Content root path: C:\Users\kethe\Documents\Individual Project\Own\BackEnd\TASKHIVE
+2025-11-24 19:19:18.294 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/index.html - null null
+2025-11-24 19:19:18.569 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/index.html - 200 null text/html;charset=utf-8 282.3157ms
+2025-11-24 19:19:18.578 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-24 19:19:18.583 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.6547ms
+2025-11-24 19:19:18.590 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_vs/browserLink - null null
+2025-11-24 19:19:18.628 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.1852ms
+2025-11-24 19:19:18.736 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - null null
+2025-11-24 19:19:18.782 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - TASKHIVE.Controllers.RoleController.Create (TASKHIVE). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - TASKHIVE.DTO.Role.CreateLabelDto. See inner exception
+ ---> System.InvalidOperationException: Can't use schemaId "$CreateLabelDto" for type "$TASKHIVE.DTO.Role.CreateLabelDto". The same schemaId is already used for type "$TASKHIVE.DTO.Label.CreateLabelDto"
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaRepository.RegisterType(Type type, String schemaId)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateReferencedSchema(DataContract dataContract, SchemaRepository schemaRepository, Func`1 definitionFactory)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateConcreteSchema(DataContract dataContract, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForParameter(Type modelType, SchemaRepository schemaRepository, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBodyFromBodyParameter(ApiDescription apiDescription, SchemaRepository schemaRepository, ApiParameterDescription bodyParameter)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateRequestBody(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-24 19:19:18.794 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 58.2783ms
+2025-11-24 19:25:51.847 +05:30 [INF] Now listening on: http://localhost:5138
+2025-11-24 19:25:52.018 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-24 19:25:52.021 +05:30 [INF] Hosting environment: Development
+2025-11-24 19:25:52.024 +05:30 [INF] Content root path: C:\Users\kethe\Documents\Individual Project\Own\BackEnd\TASKHIVE
+2025-11-24 19:25:52.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/index.html - null null
+2025-11-24 19:25:52.719 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/index.html - 200 null text/html;charset=utf-8 332.6482ms
+2025-11-24 19:25:52.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-24 19:25:52.743 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/_vs/browserLink - null null
+2025-11-24 19:25:52.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 13.9098ms
+2025-11-24 19:25:52.791 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.605ms
+2025-11-24 19:25:52.848 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - null null
+2025-11-24 19:25:52.942 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5138/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.832ms

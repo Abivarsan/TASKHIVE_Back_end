@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3/iCcDd0GKI=",
+  "dgSpecHash": "Xskp1J4Uwp8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kethe\\OneDrive\\Documents\\Individual Project\\TASKHIVE\\Back_end\\Work\\TASKHIVE\\TASKHIVE.csproj",
+  "projectFilePath": "C:\\Users\\kethe\\Documents\\Individual Project\\Own\\BackEnd\\TASKHIVE\\TASKHIVE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kethe\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\kethe\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

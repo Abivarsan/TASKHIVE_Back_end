@@ -14,7 +14,7 @@ namespace TASKHIVE.Controllers
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<CategoryController> _logger;
-        public CategoryController(ICategoryRepository categoryRepository, IMapper mapper, ILogger<CategoryController> logger)
+        public TimeLogController(ICategoryRepository categoryRepository, IMapper mapper, ILogger<CategoryController> logger)
         {
             _categoryRepository = categoryRepository;
             _mapper = mapper;
@@ -117,5 +117,4 @@ namespace TASKHIVE.Controllers
             return NoContent();
         }
     }
-}
 }
