@@ -5,6 +5,7 @@ using TASKHIVE.DTO.Role;
 using TASKHIVE.DTO.Users;
 using TASKHIVE.IRepository;
 using TASKHIVE.Model;
+using TASKHIVE.Service;
 
 namespace TASKHIVE.Controllers
 {
@@ -15,11 +16,26 @@ namespace TASKHIVE.Controllers
         private readonly IUsersRepository _usersRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<UsersController> _logger;
-        public UsersController(IUsersRepository usersRepository, IMapper mapper, ILogger<UsersController> logger)
+        private readonly IPasswordHasher _passwordHasher;
+        private readonly IEmailService _emailService;
+        private readonly IPasswordGenerator _passwordGenerator;
+        private readonly IJwtService _jwtService;
+        public UsersController(
+            IUsersRepository usersRepository, 
+            IMapper mapper, 
+            ILogger<UsersController> logger,
+            IPasswordHasher passwordHasher,
+            IEmailService emailService,
+            IPasswordGenerator passwordGenerator,
+            IJwtService jwtService)
         {
             _usersRepository = usersRepository;
             _mapper = mapper;
             _logger = logger;
+            _passwordHasher = passwordHasher;
+            _emailService = emailService;
+            _passwordGenerator = passwordGenerator;
+            _jwtService = jwtService;
         }
 
         [HttpPost]
@@ -33,13 +49,66 @@ namespace TASKHIVE.Controllers
             if (result)
             {
                 return Conflict("Email already exists");
+
             }
+
+            // Generate random password
+            var temporaryPassword = _passwordGenerator.GenerateRandomPassword();
+
+            // Hash the password
+            var hashedPassword = _passwordHasher.HashPassword(temporaryPassword);
+
             var users = _mapper.Map<User>(usersDto);
+            users.password = hashedPassword;
+            users.isFirstLogin = true;
+
+           
+
+            // Send welcome email with temporary password
+            try
+            {
+                await _emailService.SendWelcomeEmailAsync(users.email, users.userName, temporaryPassword);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to send welcome email to {Email}", users.email);
+                // Continue even if email fails - user creation was successful
+            }
 
             await _usersRepository.create(users);
 
-            return CreatedAtAction("GetById", new { id = users.roleId }, users);
+            return CreatedAtAction("GetById", new { id = users.userId }, users);
         }
+
+        [HttpPost("login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto loginDto)
+        {
+            var user = (await _usersRepository.GetAll())
+                .FirstOrDefault(u => u.email == loginDto.Email);
+
+            if (user == null || !_passwordHasher.VerifyPassword(loginDto.Password, user.password))
+            {
+                return Unauthorized("Invalid email or password");
+            }
+
+            var token = _jwtService.GenerateToken(user);
+
+            var response = new LoginResponseDto
+            {
+                Token = token,
+                UserId = user.userId,
+                UserName = user.userName,
+                Email = user.email,
+                RoleId = user.roleId,
+                UserCategoryId = user.userCategoryId,
+                IsFirstLogin = user.isFirstLogin
+            };
+
+            return Ok(response);
+        }
+
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]

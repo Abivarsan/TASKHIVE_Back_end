@@ -19,6 +19,8 @@ namespace TASKHIVE.Model
         [Required]
         public int userCategoryId { get; set; }
         public UserCategory UserCategory { get; set; }
+        public bool isFirstLogin { get; set; } = true;
+        public DateTime createdAt { get; set; } = DateTime.UtcNow;
         public ICollection<UserWork> UserWorks { get; set; }
         public ICollection<TimeLog> TimeLogs { get; set; }
         public ICollection<Report> Reports { get; set; }
